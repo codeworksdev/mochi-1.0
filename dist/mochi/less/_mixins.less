@@ -1,0 +1,221 @@
+// -----------------------------------------------------------------------------
+// COLORS
+// -----------------------------------------------------------------------------
+
+@_red        : #f00;
+@_green      : #0f0;
+@_blue       : #00f;
+@_black      : #000;
+@_white      : #fff;
+@_yellow     : #ff0;
+@_darkgrey   : #333;
+@_grey       : #666;
+@_lightgrey  : #999;
+@_link-color : @_blue;
+@_link-hover : darken(@_link-color,50%);
+
+// -----------------------------------------------------------------------------
+// TYPOGRAPHY
+// -----------------------------------------------------------------------------
+
+@_sans-serif : Arial, Helvetica, sans-serif;
+@_serif      : Georgia, "Times New Roman", Times, serif;
+
+// -----------------------------------------------------------------------------
+// FONT
+// -----------------------------------------------------------------------------
+
+.font(
+    @family     : inherit,
+    @size       : inherit,
+    @color      : inherit,
+    @weight     : inherit,
+    @transform  : inherit,
+    @style      : inherit,
+    @decoration : inherit,
+    @lh         : inherit
+    ) {
+    font-family: @family;
+    font-size: @size;
+    color: @color;
+    font-weight: @weight;
+    text-transform: @transform;
+    font-style: @style;
+    text-decoration: @decoration;
+    line-height: @lh;
+    }
+
+// -----------------------------------------------------------------------------
+// SHOW/HIDE
+// -----------------------------------------------------------------------------
+
+.show(@display: block) {display: @display;}
+.hide() {display: none;}
+
+// -----------------------------------------------------------------------------
+// RESIZER
+// -----------------------------------------------------------------------------
+
+.size(
+    @w : inherit,
+    @h : inherit,
+    @display : initial
+    ) {
+    width: @w;
+    height: @h;
+    display: @display;
+    }
+
+// -----------------------------------------------------------------------------
+// POSITIONING
+// -----------------------------------------------------------------------------
+
+.position(
+    @x        : inherit,
+    @y        : inherit,
+    @position : inherit,
+    @z-index  : inherit
+    ) {
+    z-index: @z-index;
+    position: @position;
+    left: @x;
+    top: @y;
+    }
+
+.xy(@x: inherit, @y: inherit) {
+    left : @x;
+    top  : @y;
+    }
+
+// -----------------------------------------------------------------------------
+// BORDER RADIUS
+// -----------------------------------------------------------------------------
+
+.border-radius(@radius: 5px) {
+          border-radius: @radius;
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+    }
+
+// -----------------------------------------------------------------------------
+// FILTER
+// -----------------------------------------------------------------------------
+
+.filter(@value) {
+    -webkit-filter: @value;
+       -moz-filter: @value;
+         -o-filter: @value;
+            filter: @value;
+    }
+
+// -----------------------------------------------------------------------------
+// GRADIENTS
+// -----------------------------------------------------------------------------
+
+.css-gradient(@from: @black, @to: @white) {
+    background-color: @to;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: -webkit-linear-gradient(top, @from, @to);
+    background-image: -moz-linear-gradient(top, @from, @to);
+    background-image: -o-linear-gradient(top, @from, @to);
+    background-image: linear-gradient(to bottom, @from, @to);
+    }
+
+// -----------------------------------------------------------------------------
+// BOX SHADOW
+// -----------------------------------------------------------------------------
+
+.boxShadow(
+    @x      : 0,
+    @y      : 0,
+    @radius : 5px,
+    @spread : 0,
+    @color  : rgba(0,0,0,0.5)
+    ) when (isnumber(@x)) {
+            box-shadow: @x @y @radius @spread @color;
+    -webkit-box-shadow: @x @y @radius @spread @color;
+       -moz-box-shadow: @x @y @radius @spread @color;
+    }
+
+.boxShadow(@x: none) when (iskeyword(@x)) {
+            box-shadow: @x;
+    -webkit-box-shadow: @x;
+       -moz-box-shadow: @x;
+    }
+
+// -----------------------------------------------------------------------------
+// IMAGE MAKER
+// -----------------------------------------------------------------------------
+
+.img(
+    @url,
+    @w        : 100%,
+    @h        : auto,
+    @size     : cover,
+    @position : 0 0,
+    @display  : block
+    ) {
+    .size(@w,@h);
+
+    display: @display;
+    background: transparent @position no-repeat url(@url);
+    background-size: @size;
+    }
+
+.img(
+    @url,
+    @w        : 100%,
+    @h        : auto,
+    @size     : cover,
+    @position : 0 0,
+    @display  : block
+    ) when (@url = none) {
+    .size(@w,@h);
+
+    display: @display;
+    background: transparent @position no-repeat;
+    background-image: none;
+    background-size: @size;
+    }
+
+// -----------------------------------------------------------------------------
+// RESET
+// -----------------------------------------------------------------------------
+
+.reset(@display: block) {
+    display: @display;
+    margin: 0;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    background: none;
+    list-style: none;
+
+    &, &:focus {
+        outline: none;
+        }
+    }
+
+// -----------------------------------------------------------------------------
+// CONTAIN FLOATS
+// -----------------------------------------------------------------------------
+
+.cf() {
+    zoom: 1;
+    &:before, &:after {content: ""; display: table;}
+    &:after {clear: both;}
+    }
+
+// -----------------------------------------------------------------------------
+// FONTAWESOME ICONIZER
+// -----------------------------------------------------------------------------
+
+.fa(@content: '', @size: inherit) {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: @size;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: @content;
+    }

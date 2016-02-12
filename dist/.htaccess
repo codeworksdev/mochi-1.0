@@ -1,0 +1,42 @@
+# 1. Enable the rule-based rewriting engine
+# 2. Set the directory index file
+# 3. Add support for APPCACHE file types
+#
+RewriteEngine On
+DirectoryIndex index.html
+AddType text/cache-manifest .appcache
+
+# 1. proc/self/environ? no way!
+# 2. Block out any script trying to set a mosConfig value through the URL
+# 3. Block out any script trying to base64_encode crap to send via URL
+# 4. Block out any script that includes a <script> tag in URL
+# 5. Block out any script trying to set a PHP GLOBALS variable via URL
+# 6. Block out any script trying to modify a _REQUEST variable via URL
+# 7. Send all blocked request to homepage with 403 Forbidden error!
+#
+RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|\%[0-9A-Z]{0,2})
+RewriteRule ^(.*)$ index.php [F,L]
+
+# secure the htaccess file
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+
+# multiple file types
+<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# secure this directory by disabling script execution
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi
+Options -ExecCGI
+
+# disable directory browsing
+Options All -Indexes

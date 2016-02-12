@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html data-page="0" data-view="0">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <title>Mochi Demo | Setters</title>
+
+        <!-- Bootstrap with optional theme -->
+        <link media="all" rel="stylesheet" href="../../dist/bootstrap/css/bootstrap.min.css">
+        <link media="all" rel="stylesheet" href="../../dist/bootstrap/css/bootstrap-theme.min.css">
+
+        <!-- Mochi theme files -->
+        <link media="all" rel="stylesheet" href="../../dist/mochi/css/style.css">
+        <link media="all" rel="stylesheet" href="../_shared/css/style.css">
+
+        <!--[if IE]>
+            <link media="all" rel="stylesheet" href="../_shared/css/ie.css">
+        <![endif]-->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="../../dist/mochi/js/helpers/html5shiv.min.js"></script>
+            <script src="../../dist/mochi/js/helpers/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body data-demo="setters">
+
+        <div id="container">
+
+            <div id="content">
+
+                <h1>Mochi Demo: <strong>Setters</strong></h1>
+                <p>This demo demonstrates how to modify the Mochi-specific HTML data attributes.</p>
+                <p><strong>Note:</strong> Open your web console to monitor changes in real-time.</p>
+                <hr>
+
+                <p>
+                    <button data-action="$m.setPage(0)"></button>
+                    <button data-action="$m.setPage(1)"></button>
+                    <button data-action="$m.setPage(2)"></button>
+                    <button data-action="$m.setPage(0,true)"></button>
+                    <button data-action="$m.setPage(1,true)"></button>
+                    <button data-action="$m.setPage(2,true)"></button>
+                </p>
+
+                <p>
+                    <button data-action="$m.setView(0)"></button>
+                    <button data-action="$m.setView(1)"></button>
+                    <button data-action="$m.setView(2)"></button>
+                    <button data-action="$m.setView(0,true)"></button>
+                    <button data-action="$m.setView(1,true)"></button>
+                    <button data-action="$m.setView(2,true)"></button>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="../../dist/mochi/js/jquery/jquery.min.js"></script>
+        <script src="../../dist/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../dist/mochi/js/helpers/modernizr-min.js"></script>
+        <script src="../../dist/mochi/js/helpers/underscore-min.js"></script>
+        <script src="../../dist/mochi/js/helpers/underscore.string.min.js"></script>
+        <script src="../../dist/mochi/js/mochi.js"></script>
+        <script src="demo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# v1.0 2016-02-11
+
+CACHE:
+# index.html is cached by default anyway -- this is just to be explicit
+index.html
+
+# / is the wildcard for all pages
+# so, for all pages, offline.html will be displayed if the user is offline
+# patha are relative to this file
+FALLBACK:
+/ offline.html
+
+# Resources that require the user to be online
+NETWORK:
+*
