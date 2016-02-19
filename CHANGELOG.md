@@ -1,3 +1,3 @@
-####v1.0.0 (2016-02-12)
+Mochi uses [GitHub's Releases feature](https://github.com/blog/1547-release-your-software) for its changelogs.
 
-- Initial release.
+See [the Releases section of our GitHub project](https://github.com/codeworksdev/mochi/releases) for changelogs for each release version of Mochi.
