@@ -3,7 +3,7 @@
 # 3. Add support for APPCACHE file types
 #
 RewriteEngine On
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 AddType text/cache-manifest .appcache
 
 # 1. proc/self/environ? no way!
@@ -22,13 +22,7 @@ RewriteCond %{QUERY_STRING} GLOBALS(=|[|\%[0-9A-Z]{0,2}) [OR]
 RewriteCond %{QUERY_STRING} _REQUEST(=|[|\%[0-9A-Z]{0,2})
 RewriteRule ^(.*)$ index.php [F,L]
 
-# secure the htaccess file
-<Files .htaccess>
-    order allow,deny
-    deny from all
-</Files>
-
-# multiple file types
+# secure sensitive file types
 <FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
     Order Allow,Deny
     Deny from all
