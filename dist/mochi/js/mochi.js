@@ -1,5 +1,5 @@
 /*!
- * Mochi v1.0.2 (http://getmochi.io)
+ * Mochi v1.1.0 (https://github.com/codeworksdev/mochi)
  * Copyright (c) 2014-2016 Carlos M. Bonilla <guru@codeworksnyc.com>
  * Licensed under the MIT license
  */
