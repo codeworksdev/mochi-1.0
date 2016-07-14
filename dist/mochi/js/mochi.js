@@ -1,5 +1,5 @@
 /*!
- * Mochi v1.1.0 (https://github.com/codeworksdev/mochi)
+ * Mochi v1.1.1 (https://github.com/codeworksdev/mochi)
  * Copyright (c) 2014-2016 Carlos M. Bonilla <guru@codeworksnyc.com>
  * Licensed under the MIT license
  */
@@ -216,7 +216,7 @@ Mochi.prototype =
 
     extend : function(k,c,f)
     {
-        eval('this[k] = new c');
+        eval('this[k] = new c(this)');
 
         if (
           f
