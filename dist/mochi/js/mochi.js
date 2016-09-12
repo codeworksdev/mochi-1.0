@@ -1,37 +1,8 @@
 /*!
- * Mochi v1.2 (https://github.com/codeworksdev/mochi)
- * Copyright (c) 2014-2016 CODEWORKS <guru@codeworksnyc.com>
+ * Mochi v1.2.1 (https://github.com/codeworksdev/mochi)
+ * Copyright (c) 2014-2016 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
-
-if (typeof jQuery === 'undefined') {
-    throw new Error('Mochi\'s JavaScript requires jQuery')
-    }
-
-+function($)
-{
-    var version = $.fn.jquery.split(' ')[0].split('.');
-
-    if (
-      (version[0] < 2 && version[1] < 9)
-      || (version[0] == 1 && version[1] == 9 && version[2] < 1))
-    {
-        throw new Error('Mochi\'s JavaScript requires jQuery version 1.9.1 or higher')
-    }
-}(jQuery);
-
-if (
-  !$
-  || typeof $ !== 'function')
-{
-    $ = jQuery
-}
-
-/*
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-*/
 
 $(document).ready(
     function(event) {
@@ -97,8 +68,8 @@ Mochi.prototype =
             p = d.attr('data-page'),
             v = d.attr('data-view');
 
-        if (!/^\d+$/.test(p)) d.attr('data-page',o.DEF_PAGE_NUMBER);
-        if (!/^\d+$/.test(v)) d.attr('data-view',o.DEF_VIEW_NUMBER);
+        if (!/^\d+(\.\d+)?$/.test(p)) d.attr('data-page',o.DEF_PAGE_NUMBER);
+        if (!/^\d+(\.\d+)?$/.test(v)) d.attr('data-view',o.DEF_VIEW_NUMBER);
 
         this.body.addClass(
               'is-page-'
@@ -177,20 +148,21 @@ Mochi.prototype =
         return this
     },
 
-    vClickName   : function(){return this.html.hasClass('no-touchevents')?this.o.CLICK_D:this.o.CLICK_M},
-    onClick      : function(e,f){if(_.isFunction(f))(_.isElement(e)?$(e):e).on(this.vClickName(),f);return this},
-    getPage      : function(p){return this._getState('Page',p)},
-    getView      : function(p){return this._getState('View',p)},
-    setPage      : function(n,f){return this._setState('Page',n,f)},
-    setView      : function(n,f){return this._setState('View',n,f)},
-    onPageChange : function(old_p){return this._onStateChange('Page',old_p)},
-    onViewChange : function(old_v){return this._onStateChange('View',old_v)},
-    loadPage     : function(n){return this._load('Page',n)},
-    loadView     : function(n){return this._load('View',n)},
-    unloadPage   : function(n){return this._unload('Page',n)},
-    unloadView   : function(n){return this._unload('View',n)},
-    do           : function(f){if(/^\w+$/.test(f))eval('if(_.isFunction(window["'+f+'"]))window["'+f+'"].call(this);');return this},
-    cache        : function(s){if(s&&typeof s==='string'){var e=new Image;e.src=s}return this},
+    vClickName     : function(){return this.html.hasClass('no-touchevents')?this.o.CLICK_D:this.o.CLICK_M},
+    onClick        : function(e,f){if(_.isFunction(f))(_.isElement(e)?$(e):e).on(this.vClickName(),f);return this},
+    getPage        : function(p){return this._getState('Page',p)},
+    getView        : function(p){return this._getState('View',p)},
+    setPage        : function(n,f){return this._setState('Page',n,f)},
+    setView        : function(n,f){return this._setState('View',n,f)},
+    onPageChange   : function(old_p){return this._onStateChange('Page',old_p)},
+    onViewChange   : function(old_v){return this._onStateChange('View',old_v)},
+    loadPage       : function(n){return this._load('Page',n)},
+    loadView       : function(n){return this._load('View',n)},
+    unloadPage     : function(n){return this._unload('Page',n)},
+    unloadView     : function(n){return this._unload('View',n)},
+    do             : function(f){x=this.sanitize_title(f);if(/^\w+$/.test(x))eval('if(_.isFunction(window["'+x+'"]))window["'+x+'"].call(this);');return this},
+    cache          : function(s){if(s&&typeof s==='string'){var e=new Image;e.src=s}return this},
+    sanitize_title : function(s,r){return s.replace(/\W/g,r==null?'_':r)},
 
     Option : function(k,v)
     {
