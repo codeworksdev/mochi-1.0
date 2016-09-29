@@ -1,5 +1,5 @@
 /*!
- * Mochi v1.2.1 (https://github.com/codeworksdev/mochi)
+ * Mochi v1.2.2 (https://github.com/codeworksdev/mochi)
  * Copyright (c) 2014-2016 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
@@ -161,7 +161,7 @@ Mochi.prototype =
     unloadPage     : function(n){return this._unload('Page',n)},
     unloadView     : function(n){return this._unload('View',n)},
     do             : function(f){x=this.sanitize_title(f);if(/^\w+$/.test(x))eval('if(_.isFunction(window["'+x+'"]))window["'+x+'"].call(this);');return this},
-    cache          : function(s){if(s&&typeof s==='string'){var e=new Image;e.src=s}return this},
+    cache          : function(src,w,h){var e=new Image(w,h);e.src=src;return e},
     sanitize_title : function(s,r){return s.replace(/\W/g,r==null?'_':r)},
 
     Option : function(k,v)
