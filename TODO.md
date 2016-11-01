@@ -1,1 +1,1 @@
-* Add RequireJS to modularize all scripts.
+* Add [RequireJS](http://requirejs.org/) to modularize all scripts.
