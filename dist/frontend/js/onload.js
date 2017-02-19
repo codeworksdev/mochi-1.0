@@ -33,7 +33,7 @@ $(document).ready(
     {
         $m.extend(
             'app',
-            MyWebApplication,
+            MyApplication,
             function() {
                 this.onload()
                 }
@@ -47,12 +47,12 @@ $(document).ready(
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 */
 
-function MyWebApplication()
+function MyApplication()
 {
-    this._init();
+    this._init()
 };
 
-MyWebApplication.prototype =
+MyApplication.prototype =
 {
     _init : function()
     {
