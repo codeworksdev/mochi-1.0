@@ -1,8 +1,11 @@
 {
-    "name"        : "Mochi",
-    "start_url"   : "index.html",
-    "display"     : "standalone",
-    "orientation" : "landscape",
+    "name"             : "Mochi",
+    "short_name"       : "Mochi",
+    "start_url"        : "index.html",
+    "display"          : "standalone",
+    "orientation"      : "portrait",
+    "theme_color"      : "#ffcc00",
+    "background_color" : "#ffcc00",
     "icons" : [
         {
             "src"   : "frontend/img/brand/launcher-icon-1x.png",

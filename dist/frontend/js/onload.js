@@ -10,6 +10,10 @@ Mochi_onMutation = function(mutation)
 
 Mochi_init = function()
 {
+    this.setOption(
+        'ENABLE_SERVICE_WORKER',
+        false
+        );
 };
 
 /*

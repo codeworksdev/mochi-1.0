@@ -1,5 +1,5 @@
 /*!
- * Mochi v1.3 (https://github.com/codeworksdev/mochi)
+ * Mochi v1.3.1 (https://github.com/codeworksdev/mochi)
  * Copyright (c) 2014-2017 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
@@ -18,6 +18,7 @@ $(document).ready(
 
 function Mochi()
 {
+    this._options();
     this._vars();
     this._observer();
     this._html();
@@ -33,6 +34,14 @@ function Mochi()
 
 Mochi.prototype =
 {
+    _options : function()
+    {
+        this.options = {
+            CLICK_NAME : 'auto',
+            ENABLE_SERVICE_WORKER : false,
+            };
+    },
+
     _vars : function()
     {
         this.__href      = window.location.href;
@@ -49,6 +58,7 @@ Mochi.prototype =
             'do',
             'extend',
             'getOnClickName',
+            'getOption',
             'getPage',
             'getState',
             'getView',
@@ -59,7 +69,10 @@ Mochi.prototype =
             'onPageChange',
             'onStateChange',
             'onViewChange',
+            'options',
             'sanitizeTitle',
+            'setOnClickName',
+            'setOption',
             'setPage',
             'setState',
             'setView',
@@ -113,6 +126,17 @@ Mochi.prototype =
           .do('Mochi_Page'+this.getPage()+'_load')
           .do('Mochi_View'+this.getView()+'_load')
           .do('Mochi_last');
+
+        if (
+          this.options.ENABLE_SERVICE_WORKER
+          && 'serviceWorker' in navigator)
+        {
+            navigator
+              .serviceWorker
+              .register('/sw.js')
+              .then(function(registration){console.log('ServiceWorker registration successful with scope: '+registration.scope)})
+              .catch(function(err) {console.log('ServiceWorker registration failed: '+err)});
+        }
     },
 
     _onMutation : function(mutation)
@@ -130,7 +154,8 @@ Mochi.prototype =
     container      : function(){return this.__body.find('#container')},
     content        : function(){return this.__body.find('#content')},
     do             : function(f){var x=this.sanitizeTitle(f,'_');if(/^\w+$/.test(x))eval('if(_.isFunction(window["'+x+'"]))window["'+x+'"].call(this);');return this},
-    getOnClickName : function(){return this.__html.hasClass('no-touchevents')?'click':'touchstart'},
+    getOnClickName : function(){var o=this.getOption('CLICK_NAME');return o=='auto'?(this.__html.hasClass('no-touchevents')?'click':'touchstart'):o},
+    getOption      : function(k){return this.options[k]},
     getPage        : function(p){return this.getState('Page',p)},
     getState       : function(s,p){return window.s.pad(this.__html.attr('data-'+s.toLowerCase()),p?p:0,'0')},
     getView        : function(p){return this.getState('View',p)},
@@ -144,6 +169,8 @@ Mochi.prototype =
     unloadPage     : function(n){return this.unload('Page',n)},
     unloadView     : function(n){return this.unload('View',n)},
     sanitizeTitle  : function(s,r){return s.replace(/[^a-z\d]/ig,r==null?'-':r)},
+    setOnClickName : function(v){return this.setOption('CLICK_NAME',v)},
+    setOption      : function(k,v){if(k&&/^[a-z]\w*$/i.test(k)){this.options[k]=v;return true}return},
     setPage        : function(n,f){return this.setState('Page',n,f)},
     setView        : function(n,f){return this.setState('View',n,f)},
 
