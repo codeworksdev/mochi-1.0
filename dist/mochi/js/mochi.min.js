@@ -1,5 +1,5 @@
 /*!
- * Mochi v1.3.1 (https://github.com/codeworksdev/mochi)
+ * Mochi v1.3.2 (https://github.com/codeworksdev/mochi)
  * Copyright (c) 2014-2017 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
