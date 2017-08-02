@@ -5,20 +5,36 @@
 @import "_tweaks";
 @import "_base";
 
-@media only screen and ( min-width: 375px                  ) { @import "_375up";  }
-@media only screen and ( min-width: 425px                  ) { @import "_425up";  }
-@media only screen and ( min-width: 480px                  ) { @import "_480up";  }
-@media only screen and ( min-width: 750px                  ) { @import "_750up";  }
-@media only screen and ( min-width: 768px                  ) { @import "_768up";  }
-@media only screen and ( min-width: 970px                  ) { @import "_970up";  }
-@media only screen and ( min-width: 992px                  ) { @import "_992up";  }
-@media only screen and ( min-width: 1024px                 ) { @import "_1024up"; }
-@media only screen and ( min-width: 1170px                 ) { @import "_1170up"; }
-@media only screen and ( min-width: 1200px                 ) { @import "_1200up"; }
-@media only screen and ( min-width: 1440px                 ) { @import "_1440up"; }
-@media only screen and ( min-width: 1560px                 ) { @import "_1560up"; }
-@media only screen and ( min-width: 2560px                 ) { @import "_2560up"; }
-@media only screen and ( -webkit-min-device-pixel-ratio: 2 ) { @import "_retina"; }
+@media only screen and ( min-width: 375px  ) { @import "_375up";  }
+@media only screen and ( min-width: 425px  ) { @import "_425up";  }
+@media only screen and ( min-width: 480px  ) { @import "_480up";  }
+@media only screen and ( min-width: 750px  ) { @import "_750up";  }
+@media only screen and ( min-width: 768px  ) { @import "_768up";  }
+@media only screen and ( min-width: 970px  ) { @import "_970up";  }
+@media only screen and ( min-width: 992px  ) { @import "_992up";  }
+@media only screen and ( min-width: 1020px ) { @import "_1020up"; }
+@media only screen and ( min-width: 1024px ) { @import "_1024up"; }
+@media only screen and ( min-width: 1170px ) { @import "_1170up"; }
+@media only screen and ( min-width: 1200px ) { @import "_1200up"; }
+@media only screen and ( min-width: 1440px ) { @import "_1440up"; }
+@media only screen and ( min-width: 1560px ) { @import "_1560up"; }
+@media only screen and ( min-width: 2560px ) { @import "_2560up"; }
+
+@media only screen and (min-resolution: 2dppx)                           { @import "_2dppx_base";   }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 375px  ) { @import "_2dppx_375up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 425px  ) { @import "_2dppx_425up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 480px  ) { @import "_2dppx_480up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 750px  ) { @import "_2dppx_750up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 768px  ) { @import "_2dppx_768up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 970px  ) { @import "_2dppx_970up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 992px  ) { @import "_2dppx_992up";  }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 1020px ) { @import "_2dppx_1020up"; }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 1024px ) { @import "_2dppx_1024up"; }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 1170px ) { @import "_2dppx_1170up"; }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 1200px ) { @import "_2dppx_1200up"; }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 1440px ) { @import "_2dppx_1440up"; }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 1560px ) { @import "_2dppx_1560up"; }
+@media only screen and (min-resolution: 2dppx) and ( min-width: 2560px ) { @import "_2dppx_2560up"; }
 
 html.no-touchevents {
     @import "_notouch";

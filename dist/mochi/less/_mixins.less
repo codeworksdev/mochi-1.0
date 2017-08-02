@@ -49,8 +49,13 @@
 // SHOW/HIDE
 // -----------------------------------------------------------------------------
 
-.show(@display: block) {display: @display;}
-.hide() {display: none;}
+.show(@display: block) {
+    display: @display;
+    }
+
+.hide() {
+    display: none;
+    }
 
 // -----------------------------------------------------------------------------
 // RESIZER
@@ -233,4 +238,23 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: @content;
+    }
+
+// -----------------------------------------------------------------------------
+// VISIBILITY
+// -----------------------------------------------------------------------------
+
+.hidden() {visibility: hidden;}
+.visible() {visibility: visible;}
+
+// -----------------------------------------------------------------------------
+// ZOOM
+// -----------------------------------------------------------------------------
+
+.zoom(@scale: 1.0, @origin: left center) {
+                     zoom: @scale;
+                 -ms-zoom: @scale;
+             -webkit-zoom: @scale;
+           -moz-transform: scale(@scale, @scale);
+    -moz-transform-origin: @origin;
     }
