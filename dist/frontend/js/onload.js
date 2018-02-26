@@ -1,18 +1,12 @@
-Mochi_onMutation = function(mutation)
-{
-};
-
-/*
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-*/
-
-Mochi_init = function()
+function mochi_init()
 {
     this.setOption(
-        'ENABLE_SERVICE_WORKER',
-        false
+        {
+            CLICK_NAME              : 'auto',
+            ENABLE_SERVICE_WORKER   : false,
+            SW_VERBOSE_SYNCING      : true,
+            SW_UPDATE_NOTIFICATIONS : true,
+        }
         );
 };
 
@@ -22,9 +16,12 @@ Mochi_init = function()
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 */
 
-function Mochi_Page0_load()
-{
-};
+function mochi_onmutation   (mutation) {};
+function mochi_page0_load   ()         {};
+function mochi_page0_unload ()         {};
+function mochi_view0_load   ()         {};
+function mochi_view0_unload ()         {};
+function mochi_last         ()         {};
 
 /*
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -37,7 +34,7 @@ $(document).ready(
     {
         $m.extend(
             'app',
-            MyApplication,
+            MyMochiApplication,
             function() {
                 this.onload()
                 }
@@ -51,18 +48,19 @@ $(document).ready(
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 */
 
-function MyApplication()
+function MyMochiApplication()
 {
-    this._init()
+    this._options();
+    this._html();
+    this._vars();
+    this._init();
 };
 
-MyApplication.prototype =
+MyMochiApplication.prototype =
 {
-    _init : function()
-    {
-    },
-
-    onload : function()
-    {
-    }
+    _options : function(){},
+    _html    : function(){},
+    _vars    : function(){},
+    _init    : function(){},
+    onload   : function(){},
 };

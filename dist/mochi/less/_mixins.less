@@ -2,17 +2,33 @@
 // COLORS
 // -----------------------------------------------------------------------------
 
-@_red        : #f00;
-@_green      : #0f0;
-@_blue       : #00f;
 @_black      : #000;
-@_white      : #fff;
-@_yellow     : #ff0;
-@_darkgrey   : #333;
-@_grey       : #666;
+@_blue       : #007bff;
+@_cyan       : #17a2b8;
+@_danger     : #dc3545;
+@_dark       : #343a40;
+@_darkgrey   : #343a40;
+@_gray       : #6c757d;
+@_gray-dark  : #343a40;
+@_green      : #28a745;
+@_grey       : #6c757d;
+@_indigo     : #6610f2;
+@_info       : #17a2b8;
+@_light      : #f8f9fa;
 @_lightgrey  : #999;
 @_link-color : @_blue;
-@_link-hover : darken(@_link-color,50%);
+@_link-hover : darken(@_link-color, 50%);
+@_orange     : #fd7e14;
+@_pink       : #e83e8c;
+@_primary    : #007bff;
+@_purple     : #6f42c1;
+@_red        : #dc3545;
+@_secondary  : #6c757d;
+@_success    : #28a745;
+@_teal       : #20c997;
+@_warning    : #ffc107;
+@_white      : #ffffff;
+@_yellow     : #ffc107;
 
 // -----------------------------------------------------------------------------
 // TYPOGRAPHY
@@ -20,198 +36,7 @@
 
 @_sans-serif : Arial, Helvetica, sans-serif;
 @_serif      : Georgia, "Times New Roman", Times, serif;
-
-// -----------------------------------------------------------------------------
-// FONT
-// -----------------------------------------------------------------------------
-
-.font(
-    @family     : inherit,
-    @size       : inherit,
-    @color      : inherit,
-    @weight     : inherit,
-    @transform  : inherit,
-    @style      : inherit,
-    @decoration : inherit,
-    @lh         : inherit
-    ) {
-    font-family: @family;
-    font-size: @size;
-    color: @color;
-    font-weight: @weight;
-    text-transform: @transform;
-    font-style: @style;
-    text-decoration: @decoration;
-    line-height: @lh;
-    }
-
-// -----------------------------------------------------------------------------
-// SHOW/HIDE
-// -----------------------------------------------------------------------------
-
-.show(@display: block) {
-    display: @display;
-    }
-
-.hide() {
-    display: none;
-    }
-
-// -----------------------------------------------------------------------------
-// RESIZER
-// -----------------------------------------------------------------------------
-
-.size(
-    @w : inherit,
-    @h : inherit,
-    @display : inherit
-    ) {
-    width: @w;
-    height: @h;
-    display: @display;
-    }
-
-// -----------------------------------------------------------------------------
-// POSITIONING
-// -----------------------------------------------------------------------------
-
-.position(
-    @x        : inherit,
-    @y        : inherit,
-    @position : inherit,
-    @z-index  : inherit
-    ) {
-    z-index: @z-index;
-    position: @position;
-    left: @x;
-    top: @y;
-    }
-
-.xy(@x: inherit, @y: inherit) {
-    left : @x;
-    top  : @y;
-    }
-
-// -----------------------------------------------------------------------------
-// BORDER RADIUS
-// -----------------------------------------------------------------------------
-
-.border-radius(@radius: 5px) {
-          border-radius: @radius;
-  -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-    }
-
-// -----------------------------------------------------------------------------
-// FILTER
-// -----------------------------------------------------------------------------
-
-.filter(@value) {
-    -webkit-filter: @value;
-       -moz-filter: @value;
-         -o-filter: @value;
-            filter: @value;
-    }
-
-// -----------------------------------------------------------------------------
-// GRADIENTS
-// -----------------------------------------------------------------------------
-
-.css-gradient(@from: @black, @to: @white) {
-    background-color: @to;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
-    background-image: -webkit-linear-gradient(top, @from, @to);
-    background-image: -moz-linear-gradient(top, @from, @to);
-    background-image: -o-linear-gradient(top, @from, @to);
-    background-image: linear-gradient(to bottom, @from, @to);
-    }
-
-// -----------------------------------------------------------------------------
-// BOX SHADOW
-// -----------------------------------------------------------------------------
-
-.boxShadow(
-    @x      : 0,
-    @y      : 0,
-    @radius : 5px,
-    @spread : 0,
-    @color  : rgba(0,0,0,0.5)
-    ) when (isnumber(@x)) {
-            box-shadow: @x @y @radius @spread @color;
-    -webkit-box-shadow: @x @y @radius @spread @color;
-       -moz-box-shadow: @x @y @radius @spread @color;
-    }
-
-.boxShadow(@x: none) when (iskeyword(@x)) {
-            box-shadow: @x;
-    -webkit-box-shadow: @x;
-       -moz-box-shadow: @x;
-    }
-
-// -----------------------------------------------------------------------------
-// IMAGE MAKERS
-// -----------------------------------------------------------------------------
-
-.img() {
-    .size(100%,auto,block);
-
-    background: transparent 0 0 no-repeat;
-    background-image: none;
-    background-size: cover;
-    }
-
-.img(
-    @url,
-    @w        : 100%,
-    @h        : auto,
-    @size     : cover,
-    @position : 0 0,
-    @display  : block
-    ) {
-    .size(@w,@h,@display);
-
-    background: transparent @position no-repeat url(@url);
-    background-size: @size;
-    }
-
-.img(
-    @url,
-    @w        : 100%,
-    @h        : auto,
-    @size     : cover,
-    @position : 0 0,
-    @display  : block
-    ) when (@url = none) {
-    .size(@w,@h,@display);
-
-    background: transparent @position no-repeat;
-    background-image: none;
-    background-size: @size;
-    }
-
-.img_src(@url, @w: 100%, @h: auto) {
-    background-image: url(@url);
-    width: @w;
-    height: @h;
-    }
-
-// -----------------------------------------------------------------------------
-// RESET
-// -----------------------------------------------------------------------------
-
-.reset(@display: block) {
-    display: @display;
-    margin: 0;
-    border: none;
-    padding: 0;
-    text-decoration: none;
-    background: none;
-    list-style: none;
-
-    &, &:focus {
-        outline: none;
-        }
-    }
+@_helvetica  : Helvetica, sans-serif;
 
 // -----------------------------------------------------------------------------
 // CONTAIN FLOATS
@@ -227,25 +52,206 @@
     }
 
 // -----------------------------------------------------------------------------
-// FONTAWESOME ICONIZER
+// FONT
 // -----------------------------------------------------------------------------
 
-.fa(@content: '', @size: inherit) {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
+.font(
+    @cond       : inherit;
+    @size       : inherit;
+    @color      : inherit;
+    @weight     : inherit;
+    @transform  : inherit;
+    @style      : inherit;
+    @decoration : inherit;
+    @lh         : inherit
+    ) when (iskeyword(@cond)), (isstring(@cond)) {
+    font-family: @cond;
     font-size: @size;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: @content;
+    color: @color;
+    font-weight: @weight;
+    text-transform: @transform;
+    font-style: @style;
+    text-decoration: @decoration;
+    line-height: @lh;
+    }
+
+.font(
+    @cond : inherit;
+    @size : inherit;
+    @lh   : inherit
+    ) when (iscolor(@cond)) {
+    color: @cond;
+    font-size: @size;
+    line-height: @lh;
+    }
+
+.font(
+    @cond : inherit;
+    @lh   : inherit
+    ) when (isnumber(@cond)) {
+    font-size: @cond;
+    line-height: @lh;
     }
 
 // -----------------------------------------------------------------------------
-// VISIBILITY
+// SHOW/HIDE
 // -----------------------------------------------------------------------------
 
-.hidden() {visibility: hidden;}
-.visible() {visibility: visible;}
+.hidden()              {visibility: hidden;}
+.hide()                {display: none;}
+.show(@display: block) {display: @display;}
+.visible()             {visibility: visible;}
+
+// -----------------------------------------------------------------------------
+// RESIZER
+// -----------------------------------------------------------------------------
+
+.size(@w; @h) {
+    width: @w;
+    height: @h;
+    }
+
+.size(@w; @h; @display) {
+    display: @display;
+    width: @w;
+    height: @h;
+    }
+
+// -----------------------------------------------------------------------------
+// POSITIONING
+// -----------------------------------------------------------------------------
+
+.position(
+    @x        : 0;
+    @y        : 0;
+    @position : inherit;
+    @z-index  : inherit
+    ) {
+    position: @position;
+    left: @x;
+    top: @y;
+    z-index: @z-index;
+    }
+
+.xy(@x: 0; @y: 0) {
+    left : @x;
+    top : @y;
+    }
+
+// -----------------------------------------------------------------------------
+// GRADIENTS
+// -----------------------------------------------------------------------------
+
+.gradient(
+    @a: @_black;
+    @b: fade(@_black, 0%)) {
+    background-color: @b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@a), to(@b));
+    background-image: -webkit-linear-gradient(top, @a, @b);
+    background-image: -moz-linear-gradient(top, @a, @b);
+    background-image: -o-linear-gradient(top, @a, @b);
+    background-image: linear-gradient(to bottom, @a, @b);
+    }
+
+// -----------------------------------------------------------------------------
+// BOX SHADOW
+// -----------------------------------------------------------------------------
+
+.boxShadow(
+    @x      : 0;
+    @y      : 0;
+    @radius : 5px;
+    @spread : 0;
+    @color  : fade(@_black, 50%)
+    ) when (isnumber(@x)) {
+            box-shadow: @x @y @radius @spread @color;
+    -webkit-box-shadow: @x @y @radius @spread @color;
+       -moz-box-shadow: @x @y @radius @spread @color;
+    }
+
+.boxShadow(@x) when (iskeyword(@x)) {
+            box-shadow: @x;
+    -webkit-box-shadow: @x;
+       -moz-box-shadow: @x;
+    }
+
+// -----------------------------------------------------------------------------
+// IMAGE MAKERS
+// -----------------------------------------------------------------------------
+
+.img() {
+    .size(auto; auto; block);
+
+    background: transparent 0 0 no-repeat;
+    background-image: none;
+    background-size: cover;
+    }
+
+.img(
+    @url;
+    @w        : auto;
+    @h        : auto;
+    @size     : cover;
+    @position : 0 0;
+    @display  : block
+    ) {
+    .size(@w, @h, @display);
+
+    background: transparent @position no-repeat url(@url);
+    background-size: @size;
+    }
+
+.img(
+    @url,
+    @w        : auto;
+    @h        : auto;
+    @size     : cover;
+    @position : 0 0;
+    @display  : block
+    ) when (@url = none) {
+    .size(@w, @h, @display);
+
+    background: transparent @position no-repeat;
+    background-image: none;
+    background-size: @size;
+    }
+
+.img_src(
+    @url;
+    @w: auto;
+    @h: auto) {
+    .size(@w, @h);
+
+    background-image: url(@url);
+    }
+
+// -----------------------------------------------------------------------------
+// RESET
+// -----------------------------------------------------------------------------
+
+.reset(@display: block) {
+    display: @display;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    color: initial;
+    font-family: @_sans-serif;
+    font-size: initial;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+
+    &, &:focus {
+        outline: none;
+        }
+    }
 
 // -----------------------------------------------------------------------------
 // ZOOM

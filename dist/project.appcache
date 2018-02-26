@@ -1,8 +1,73 @@
 CACHE MANIFEST
-# v1.0 2017-03-24
+# v1.0 2018-02-26
 
 # HTML files should not be included here
 CACHE:
+
+# CSS
+bootstrap/css/bootstrap.css
+bootstrap/css/bootstrap.min.css
+bootstrap/css/bootstrap-grid.min.css
+bootstrap/css/bootstrap-grid.css
+bootstrap/css/bootstrap-reboot.min.css
+bootstrap/css/bootstrap-reboot.css
+mochi/js/helpers/ViewerJS/example.local.css
+mochi/js/helpers/font-awesome/svg-with-js/css/fa-svg-with-js.css
+mochi/css/print.css
+mochi/css/style.css
+frontend/css/print.css
+frontend/css/style.css
+
+# JS
+bootstrap/js/bootstrap.js
+bootstrap/js/bootstrap.min.js
+bootstrap/js/bootstrap.bundle.min.js
+bootstrap/js/bootstrap.bundle.js
+mochi/js/jquery/jquery.min.js
+mochi/js/mochi.min.js
+mochi/js/mochi.js
+mochi/js/helpers/sprintf.min.js
+mochi/js/helpers/underscore-min.js
+mochi/js/helpers/popper.min.js
+mochi/js/helpers/ViewerJS/webodf.js
+mochi/js/helpers/ViewerJS/compatibility.js
+mochi/js/helpers/ViewerJS/ui_utils.js
+mochi/js/helpers/ViewerJS/pdfjsversion.js
+mochi/js/helpers/ViewerJS/text_layer_builder.js
+mochi/js/helpers/ViewerJS/pdf.worker.js
+mochi/js/helpers/ViewerJS/pdf.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome-all.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-solid.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-brands.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-v4-shims.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-v4-shims.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-solid.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-regular.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-brands.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-regular.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome-all.js
+mochi/js/helpers/underscore.string.min.js
+mochi/js/helpers/basil.min.js
+mochi/js/helpers/holder.min.js
+mochi/js/helpers/modernizr-custom.js
+frontend/js/onload.js
+
+# PNG/JPEG/GIF
+mochi/js/helpers/ViewerJS/images/kogmbh.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-presentation.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-menuArrows.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-fullscreen.png
+mochi/js/helpers/ViewerJS/images/nlnet.png
+mochi/js/helpers/ViewerJS/images/texture.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-pageUp.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-zoomOut.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-download.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-zoomIn.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-pageDown.png
+frontend/img/brand/launcher-icon-1x.png
+frontend/img/brand/launcher-icon-4x.png
 
 # / is the wildcard for all pages
 # so, for all pages, offline.html will be displayed if the user is offline
