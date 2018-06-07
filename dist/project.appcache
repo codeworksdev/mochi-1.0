@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v1.0 2018-02-26
+# v1.0 2018-06-07
 
 # HTML files should not be included here
 CACHE:
@@ -7,67 +7,101 @@ CACHE:
 # CSS
 bootstrap/css/bootstrap.css
 bootstrap/css/bootstrap.min.css
-bootstrap/css/bootstrap-grid.min.css
 bootstrap/css/bootstrap-grid.css
-bootstrap/css/bootstrap-reboot.min.css
+bootstrap/css/bootstrap-grid.min.css
 bootstrap/css/bootstrap-reboot.css
-mochi/js/helpers/ViewerJS/example.local.css
-mochi/js/helpers/font-awesome/svg-with-js/css/fa-svg-with-js.css
-mochi/css/print.css
-mochi/css/style.css
+bootstrap/css/bootstrap-reboot.min.css
 frontend/css/print.css
 frontend/css/style.css
+mochi/css/helpers/animate.less/dist/css/animate.css
+mochi/js/helpers/font-awesome/svg-with-js/css/fa-svg-with-js.css
+mochi/js/helpers/ViewerJS/example.local.css
+mochi/js/helpers/ViewerJS/ODFViewerPlugin.css
+mochi/js/helpers/ViewerJS/PDFViewerPlugin.css
+mochi/js/helpers/ViewerJS/viewer.css
+mochi/js/helpers/ViewerJS/viewerTouch.css
+mochi/js/jquery/ui/jquery-ui.css
+mochi/js/jquery/ui/jquery-ui.min.css
+mochi/js/jquery/ui/jquery-ui.structure.css
+mochi/js/jquery/ui/jquery-ui.structure.min.css
+mochi/js/jquery/ui/jquery-ui.theme.css
+mochi/js/jquery/ui/jquery-ui.theme.min.css
 
 # JS
+bootstrap/js/bootstrap.bundle.js
+bootstrap/js/bootstrap.bundle.min.js
 bootstrap/js/bootstrap.js
 bootstrap/js/bootstrap.min.js
-bootstrap/js/bootstrap.bundle.min.js
-bootstrap/js/bootstrap.bundle.js
-mochi/js/jquery/jquery.min.js
-mochi/js/mochi.min.js
-mochi/js/mochi.js
-mochi/js/helpers/sprintf.min.js
-mochi/js/helpers/underscore-min.js
-mochi/js/helpers/popper.min.js
-mochi/js/helpers/ViewerJS/webodf.js
-mochi/js/helpers/ViewerJS/compatibility.js
-mochi/js/helpers/ViewerJS/ui_utils.js
-mochi/js/helpers/ViewerJS/pdfjsversion.js
-mochi/js/helpers/ViewerJS/text_layer_builder.js
-mochi/js/helpers/ViewerJS/pdf.worker.js
-mochi/js/helpers/ViewerJS/pdf.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome-all.min.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fa-solid.min.js
+frontend/js/onload.js
+mochi/js/helpers/basil.min.js
 mochi/js/helpers/font-awesome/svg-with-js/js/fa-brands.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-brands.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-regular.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-regular.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-solid.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fa-solid.min.js
 mochi/js/helpers/font-awesome/svg-with-js/js/fa-v4-shims.js
 mochi/js/helpers/font-awesome/svg-with-js/js/fa-v4-shims.min.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fa-solid.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome.min.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fa-regular.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fa-brands.min.js
 mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome.js
-mochi/js/helpers/font-awesome/svg-with-js/js/fa-regular.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome.min.js
 mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome-all.js
-mochi/js/helpers/underscore.string.min.js
-mochi/js/helpers/basil.min.js
+mochi/js/helpers/font-awesome/svg-with-js/js/fontawesome-all.min.js
 mochi/js/helpers/holder.min.js
+mochi/js/helpers/iScroll/build/iscroll.js
+mochi/js/helpers/iScroll/build/iscroll.min.js
+mochi/js/helpers/iScroll/build/iscroll-infinite.js
+mochi/js/helpers/iScroll/build/iscroll-infinite.min.js
+mochi/js/helpers/iScroll/build/iscroll-lite.js
+mochi/js/helpers/iScroll/build/iscroll-lite.min.js
+mochi/js/helpers/iScroll/build/iscroll-probe.js
+mochi/js/helpers/iScroll/build/iscroll-probe.min.js
+mochi/js/helpers/iScroll/build/iscroll-zoom.js
+mochi/js/helpers/iScroll/build/iscroll-zoom.min.js
 mochi/js/helpers/modernizr-custom.js
-frontend/js/onload.js
+mochi/js/helpers/popper.min.js
+mochi/js/helpers/sprintf.min.js
+mochi/js/helpers/underscore.string.min.js
+mochi/js/helpers/underscore-min.js
+mochi/js/helpers/ViewerJS/HeaderCompiled.js
+mochi/js/helpers/ViewerJS/ODFViewerPlugin.js
+mochi/js/helpers/ViewerJS/PDFViewerPlugin.js
+mochi/js/helpers/ViewerJS/PluginLoader.js
+mochi/js/helpers/ViewerJS/tools/replaceByFileContents.js
+mochi/js/helpers/ViewerJS/viewer.js
+mochi/js/jquery/jquery.min.js
+mochi/js/jquery/ui/jquery-ui.js
+mochi/js/jquery/ui/jquery-ui.min.js
+mochi/js/libraries.js
+mochi/js/mochi.js
+mochi/js/mochi.min.js
+mochi/js/plugins/dialog/dist/dialog.js
+mochi/js/plugins/dialog/dist/dialog.min.js
+mochi/js/plugins/veeva/dist/veeva.js
+mochi/js/plugins/veeva/dist/veeva.min.js
+mochi/js/plugins/veeva/dist/veeva-library.js
+mochi/js/plugins/veeva/dist/veeva-library.min.js
+sw.js
 
 # PNG/JPEG/GIF
-mochi/js/helpers/ViewerJS/images/kogmbh.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-presentation.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-menuArrows.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-fullscreen.png
-mochi/js/helpers/ViewerJS/images/nlnet.png
-mochi/js/helpers/ViewerJS/images/texture.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-pageUp.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-zoomOut.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-download.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-zoomIn.png
-mochi/js/helpers/ViewerJS/images/toolbarButton-pageDown.png
 frontend/img/brand/launcher-icon-1x.png
 frontend/img/brand/launcher-icon-4x.png
+mochi/js/helpers/ViewerJS/images/kogmbh.png
+mochi/js/helpers/ViewerJS/images/nlnet.png
+mochi/js/helpers/ViewerJS/images/texture.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-download.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-fullscreen.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-menuArrows.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-pageDown.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-pageUp.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-presentation.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-zoomIn.png
+mochi/js/helpers/ViewerJS/images/toolbarButton-zoomOut.png
+mochi/js/jquery/ui/images/ui-icons_444444_256x240.png
+mochi/js/jquery/ui/images/ui-icons_555555_256x240.png
+mochi/js/jquery/ui/images/ui-icons_777620_256x240.png
+mochi/js/jquery/ui/images/ui-icons_777777_256x240.png
+mochi/js/jquery/ui/images/ui-icons_cc0000_256x240.png
+mochi/js/jquery/ui/images/ui-icons_ffffff_256x240.png
 
 # / is the wildcard for all pages
 # so, for all pages, offline.html will be displayed if the user is offline

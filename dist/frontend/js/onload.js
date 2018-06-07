@@ -1,13 +1,15 @@
 function mochi_init()
 {
-    this.setOption(
-        {
-            CLICK_NAME              : 'auto',
-            ENABLE_SERVICE_WORKER   : false,
-            SW_VERBOSE_SYNCING      : true,
-            SW_UPDATE_NOTIFICATIONS : true,
-        }
-        );
+    this.setOption({
+        CLICK_NAME                      : this.getDefaultOption( 'CLICK_NAME'                      ),
+        DEBUG_MODE                      : this.getDefaultOption( 'DEBUG_MODE'                      ),
+        ENABLE_SERVICE_WORKER           : this.getDefaultOption( 'ENABLE_SERVICE_WORKER'           ),
+        LAZY_LOAD_PLUGINS               : this.getDefaultOption( 'LAZY_LOAD_PLUGINS'               ),
+        SW_UPDATE_NOTIFICATIONS         : this.getDefaultOption( 'SW_UPDATE_NOTIFICATIONS'         ),
+        SW_UPDATE_NOTIFICATIONS_OPTIONS : this.getDefaultOption( 'SW_UPDATE_NOTIFICATIONS_OPTIONS' ),
+        SW_VERBOSE_SYNCING              : this.getDefaultOption( 'SW_VERBOSE_SYNCING'              ),
+        SW_VERBOSE_SYNCING_OPTIONS      : this.getDefaultOption( 'SW_VERBOSE_SYNCING_OPTIONS'      ),
+        });
 };
 
 /*
@@ -16,12 +18,21 @@ function mochi_init()
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 */
 
-function mochi_onmutation   (mutation) {};
-function mochi_page0_load   ()         {};
-function mochi_page0_unload ()         {};
-function mochi_view0_load   ()         {};
-function mochi_view0_unload ()         {};
+function mochi_before       ()         {};
+function mochi_init         ()         {};
+function mochi_load         (data)     {};
+function mochi_load_page    (data)     {};
+function mochi_load_page0   (data)     {};
+function mochi_load_view    (data)     {};
+function mochi_load_view0   (data)     {};
+function mochi_unload       (data)     {};
+function mochi_unload_page  (data)     {};
+function mochi_unload_page0 (data)     {};
+function mochi_unload_view  (data)     {};
+function mochi_unload_view0 (data)     {};
 function mochi_last         ()         {};
+function mochi_onchange     (data)     {};
+function mochi_onmutation   (mutation) {};
 
 /*
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -36,7 +47,7 @@ $(document).ready(
             'app',
             MyMochiApplication,
             function() {
-                this.onload()
+                if (this.onload) this.onload()
                 }
             );
     }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-page="0" data-view="0">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author"      content="">
+
+        <title>Mochi Demo | API | Page/View States</title>
+
+        <!-- Branding -->
+        <meta name="theme-color"                           content="#2DCDC1">
+        <meta name="msapplication-navbutton-color"         content="#2DCDC1">
+        <meta name="apple-mobile-web-app-capable"          content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="format-detection"                      content="telephone=no">
+
+        <!-- Baseline theme -->
+        <link media="all"   rel="manifest"         href="../../../dist/manifest.json">
+        <link media="all"   rel="apple-touch-icon" href="../../../dist/frontend/img/brand/launcher-icon-4x.png">
+        <link media="all"   rel="stylesheet"       href="../../../dist/frontend/css/style.css">
+        <link media="print" rel="stylesheet"       href="../../../dist/frontend/css/print.css">
+        <link media="all"   rel="icon"             href="../../../dist/frontend/img/brand/launcher-icon-1x.png">
+    </head>
+    <body>
+
+        <div id="container" class="container my-4">
+
+            <div class="row">
+                <div class="col-xl">
+                    <div class="text-center">
+                        <img class="animated bounceIn" src="../../../dist/frontend/img/brand/launcher-icon-4x.png" width="96" height="96" alt="Mochi">
+                        <p class="display-4"><strong>Mochi API Demo</strong></p>
+                        <h5 class="text-muted">Page/View States</h5>
+                        <p>Use the page/view states API to quickly alter the appearance and behavior of your app.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-0 mb-4">
+
+            <div class="row text-center">
+                <div class="mb-4 col-xs-12 col-sm-6">
+
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-info active"><input type="radio" name="togglePage" id="togglePage0" value="0" checked>Page 0</label>
+                        <label class="btn btn-info"><input type="radio" name="togglePage" id="togglePage1" value="1.5">Page 1.5</label>
+                        <label class="btn btn-info"><input type="radio" name="togglePage" id="togglePage2" value="2">Page 2</label>
+                    </div>
+
+                </div>
+                <div class="mb-4 col-xs-12 col-sm-6">
+
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active"><input type="radio" name="toggleView" id="toggleView0" value="0" checked>View 0</label>
+                        <label class="btn btn-secondary"><input type="radio" name="toggleView" id="toggleView1" value="1.5">View 1.5</label>
+                        <label class="btn btn-secondary"><input type="radio" name="toggleView" id="toggleView2" value="2">View 2</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-xl">
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="alert alert-primary" role="alert">
+                                <p class="text-muted"><small><strong>API Calls</strong> (Standard)</small></p>
+                                <code class="api">n/a</code>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="alert alert-primary" role="alert">
+                                <p class="text-muted"><small><strong>API Calls</strong> (Shorthand)</small></p>
+                                <code class="api-shorthand">n/a</code>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl">
+
+                            <div class="alert alert-info text-center" role="alert">
+                                <p class="text-muted"><small><strong>HTML Result</strong> (Real-time)</small></p>
+                                <code class="html">&lt;html data-page="<strong class="page">0</strong>" data-view="<strong class="view">0</strong>"&gt;</code>
+                            </div>
+
+                            <div class="alert alert-secondary text-center" role="alert">
+                                <p class="text-muted"><small><strong>Response Data</strong> (to <i>callback</i> function and hooks)</small></p>
+                                <code class="data">n/a</code>
+                            </div>
+
+                            <p class="text-muted"><small><strong>Note:</strong> The <strong><code>response</code></strong> object is automatically passed as the first
+                            parameter in each defined hook, as well as the optional callback function (e.g., when using the <strong><code>$m.setPage()</code></strong> method).
+                            It contains valuable information that may be used for additional logic in your app. For example, the <strong><code>caller</code></strong> property is
+                            a string indicating the name of the API method or constructor that triggered the hook recieving the <strong><code>response</code></strong> object.
+                            If <strong><code>n/a</code></strong> is shown in the <strong>Response Data</strong> box above, indicates no change was detected/needed for the current
+                            page or view (i.e., no hooks triggered).</small></p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="../../../dist/mochi/js/libraries.js"></script>
+        <script src="../../../dist/mochi/js/mochi.min.js"></script>
+        <script src="onload.js"></script>
+    </body>
+</html>
