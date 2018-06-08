@@ -9,9 +9,9 @@ Mochi is a ready-to-deploy HTML5 boilerplate framework that runs on [Bootstrap](
 [Bootstrap](http://getbootstrap.com/) is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with powerful [Sass](https://sass-lang.com/) variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on [jQuery](https://jquery.com/). Mochi takes this a few steps further by enabling functionality that would normally require many hours of code writing and head-scratching. More information on Bootstrap [here](http://getbootstrap.com/).
 
 ## Usage
-To use Mochi, simply [download the latest distribution package](https://github.com/codeworksdev/mochi/releases/latest) and extract the contents of the included `dist` folder to the root of your website directory (e.g., `/var/www/html` in some systems). That's it! You now have a fully functioning, Bootstrap-powered boilerplate web application framework installed on your website. Mochi is designed to run either online or offline, depending on your desired configuration (more on that later).
+To use Mochi, simply [download the latest distribution package](https://github.com/codeworksdev/mochi/releases/latest) and extract the contents of the included **`dist`** folder to the root of your website directory (e.g., **`/var/www/html`** in some systems). That's it! You now have a fully functioning, Bootstrap-powered boilerplate web application framework installed on your website. Mochi is designed to run either online or offline, depending on your desired configuration (more on that later).
 
-The included HTML starter template ([`dist/index.html`](https://github.com/codeworksdev/mochi/blob/master/dist/index.html)) is a great way to get started with using Mochi. Because it's powered by Bootstrap you can do a bunch of things right out of the box, and with minimal effort. Check out the [official Bootstrap documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/) to learn more about how to structure your HTML/CSS markup according to the latest web standards.
+The included HTML starter template ([**`dist/index.html`**](https://github.com/codeworksdev/mochi/blob/master/dist/index.html)) is a great way to get started with using Mochi. Because it's powered by Bootstrap you can do a bunch of things right out of the box, and with minimal effort. Check out the [official Bootstrap documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/) to learn more about how to structure your HTML/CSS markup according to the latest web standards.
 
 ## What's Included
 
@@ -447,7 +447,7 @@ First things first! After your web page is loaded and rendered, the Mochi instan
 >
 > _bool_ **$m.isSimpleObj(** _mixed_ **value** **)**
 >
-> Checks whether the given value (`value`) is a simple JavaScript **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** type (i.e., not an **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** or **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)** object type). Uses the **[`_.isObject()`](http://underscorejs.org/#isObject)** Underscore.js function, but with the stricter type checking.
+> Checks whether the given value (`value`) is a simple JavaScript **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** type (i.e., not an **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** or **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)** object type). Uses the **[`_.isObject()`](http://underscorejs.org/#isObject)** [Underscore.js](http://underscorejs.org/) function, but with the stricter type checking.
 
 > ## $m.load()
 >
@@ -622,7 +622,7 @@ _**Note:** Hook are completely optional within your project and, if defined, are
 >
 > _void_ **mochi_load(** [_object_ **meta**] **)**
 >
-> If defined, executes as soon as [`$m`](#persistent-mochi-instance) is set, as well as whenever the `data-page` or `data-view` attributes in `<html>` for the active HTML document are set. (e.g., whenever [`$m.setState()`](#msetstate) is called). This hook is always precedes the [`mochi_load_page()`](#mochi_load_page) and [`mochi_load_view()`](#mochi_load_view) hooks. Additionally, [`meta`](#mload) is defined only when the `data-page` or `data-view` attributes in `<html>` for the active HTML document are changed from a previous (or initial) value.
+> If defined, executes as soon as [`$m`](#persistent-mochi-instance) is set, as well as whenever the `data-page` or `data-view` attributes in `<html>` for the active HTML document are set. (e.g., whenever [`$m.setState()`](#msetstate) is called). This hook always precedes the [`mochi_load_page()`](#mochi_load_page) and [`mochi_load_view()`](#mochi_load_view) hooks. Additionally, [`meta`](#mload) is defined only when the `data-page` or `data-view` attributes in `<html>` for the active HTML document are changed from a previous (or initial) value.
 
 > ## mochi_load_page()
 >
@@ -658,7 +658,7 @@ _**Note:** Hook are completely optional within your project and, if defined, are
 >
 > _void_ **mochi_unload_page(** _object_ **meta** **)**
 >
-> If defined, executes whenever the `data-page` attribute in `<html>` for the active HTML document is changed (e.g., when `data-page` changes `1.5` to `2`). This hook always precedes the [`mochi_unload_page{N}()`](#mochi_unload_pagen) hook, where **`{N}`** is the number that was changed in `data-page`. Additionally, [`meta`](#mload) is always defined, and includes [details](#mload) regarding the call.
+> If defined, executes whenever the `data-page` attribute in `<html>` for the active HTML document is changed (e.g., when `data-page` changes from `1.5` to `2`). This hook always precedes the [`mochi_unload_page{N}()`](#mochi_unload_pagen) hook, where **`{N}`** is the number that was changed in `data-page`. Additionally, [`meta`](#mload) is always defined, and includes [details](#mload) regarding the call.
 
 > ## mochi_unload_page{N}()
 >
@@ -670,7 +670,7 @@ _**Note:** Hook are completely optional within your project and, if defined, are
 >
 > _void_ **mochi_unload_view(** _object_ **meta** **)**
 >
-> If defined, executes whenever the `data-view` attribute in `<html>` for the active HTML document is changed (e.g., when `data-view` changes `1.5` to `2`). This hook always precedes the [`mochi_unload_view{N}()`](#mochi_unload_viewn) hook, where **`{N}`** is the number that was changed in `data-view`. Additionally, [`meta`](#mload) is always defined, and includes [details](#mload) regarding the call.
+> If defined, executes whenever the `data-view` attribute in `<html>` for the active HTML document is changed (e.g., when `data-view` changes from `1.5` to `2`). This hook always precedes the [`mochi_unload_view{N}()`](#mochi_unload_viewn) hook, where **`{N}`** is the number that was changed in `data-view`. Additionally, [`meta`](#mload) is always defined, and includes [details](#mload) regarding the call.
 
 > ## mochi_unload_view{N}()
 >
