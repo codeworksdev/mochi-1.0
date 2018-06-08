@@ -19,247 +19,247 @@ Within the download you'll find the following directories and files, logically g
 
 ```
 dist/
-├── bootstrap/
-│   ├── css/
-│   │   ├── bootstrap.css
-│   │   ├── bootstrap.min.css
-│   │   ├── bootstrap-grid.css
-│   │   ├── bootstrap-grid.min.css
-│   │   ├── bootstrap-reboot.css
-│   │   └── bootstrap-reboot.min.css
++-- bootstrap/
+¦   +-- css/
+¦   ¦   +-- bootstrap.css
+¦   ¦   +-- bootstrap.min.css
+¦   ¦   +-- bootstrap-grid.css
+¦   ¦   +-- bootstrap-grid.min.css
+¦   ¦   +-- bootstrap-reboot.css
+¦   ¦   +-- bootstrap-reboot.min.css
 |   |
-│   └── js/
-│       ├── bootstrap.bundle.js
-│       ├── bootstrap.bundle.min.js
-│       ├── bootstrap.js
-│       └── bootstrap.min.js
+¦   +-- js/
+¦       +-- bootstrap.bundle.js
+¦       +-- bootstrap.bundle.min.js
+¦       +-- bootstrap.js
+¦       +-- bootstrap.min.js
 |
-├── frontend/
-│   ├── css/
-│   │   ├── print.css
-│   │   └── style.css
++-- frontend/
+¦   +-- css/
+¦   ¦   +-- print.css
+¦   ¦   +-- style.css
 |   |
-│   ├── img/
-│   │   └── brand/
-│   │       ├── launcher-icon-1x.pmg
-│   │       └── launcher-icon-4x.pmg
+¦   +-- img/
+¦   ¦   +-- brand/
+¦   ¦       +-- launcher-icon-1x.pmg
+¦   ¦       +-- launcher-icon-4x.pmg
 |   |
-│   ├── js/
-│   |   └── onload.js
+¦   +-- js/
+¦   |   +-- onload.js
 |   |
-│   └── less/
-│       ├── _2dppx_375up.less
-│       ├── _2dppx_425up.less
-│       ├── _2dppx_480up.less
-│       ├── _2dppx_576up.less
-│       ├── _2dppx_750up.less
-│       ├── _2dppx_768up.less
-│       ├── _2dppx_970up.less
-│       ├── _2dppx_992up.less
-│       ├── _2dppx_1020up.less
-│       ├── _2dppx_1024up.less
-│       ├── _2dppx_1170up.less
-│       ├── _2dppx_1200up.less
-│       ├── _2dppx_1440up.less
-│       ├── _2dppx_1560up.less
-│       ├── _2dppx_2560up.less
-│       ├── _2dppx_base.less
-│       ├── _375up.less
-│       ├── _425up.less
-│       ├── _480up.less
-│       ├── _576up.less
-│       ├── _750up.less
-│       ├── _768up.less
-│       ├── _970up.less
-│       ├── _992up.less
-│       ├── _1020up.less
-│       ├── _1024up.less
-│       ├── _1170up.less
-│       ├── _1200up.less
-│       ├── _1440up.less
-│       ├── _1560up.less
-│       ├── _2560up.less
-│       ├── _base.less
-│       ├── _mixins.less
-│       ├── _notouch.less
-│       ├── _print.less
-│       ├── print.less
-│       └── style.less
+¦   +-- less/
+¦       +-- _2dppx_375up.less
+¦       +-- _2dppx_425up.less
+¦       +-- _2dppx_480up.less
+¦       +-- _2dppx_576up.less
+¦       +-- _2dppx_750up.less
+¦       +-- _2dppx_768up.less
+¦       +-- _2dppx_970up.less
+¦       +-- _2dppx_992up.less
+¦       +-- _2dppx_1020up.less
+¦       +-- _2dppx_1024up.less
+¦       +-- _2dppx_1170up.less
+¦       +-- _2dppx_1200up.less
+¦       +-- _2dppx_1440up.less
+¦       +-- _2dppx_1560up.less
+¦       +-- _2dppx_2560up.less
+¦       +-- _2dppx_base.less
+¦       +-- _375up.less
+¦       +-- _425up.less
+¦       +-- _480up.less
+¦       +-- _576up.less
+¦       +-- _750up.less
+¦       +-- _768up.less
+¦       +-- _970up.less
+¦       +-- _992up.less
+¦       +-- _1020up.less
+¦       +-- _1024up.less
+¦       +-- _1170up.less
+¦       +-- _1200up.less
+¦       +-- _1440up.less
+¦       +-- _1560up.less
+¦       +-- _2560up.less
+¦       +-- _base.less
+¦       +-- _mixins.less
+¦       +-- _notouch.less
+¦       +-- _print.less
+¦       +-- print.less
+¦       +-- style.less
 |
-├── mochi/
-│   ├── css/
-│   │   ├── helpers/
-|   |   |   ├── animate.less/
-|   |   |   |   └── dist/
-|   |   |   |       ├── css/
-|   |   |   |       |   └── animate.css
++-- mochi/
+¦   +-- css/
+¦   ¦   +-- helpers/
+|   |   |   +-- animate.less/
+|   |   |   |   +-- dist/
+|   |   |   |       +-- css/
+|   |   |   |       |   +-- animate.css
 |   |   |   |       |
-|   |   |   |       └── less/
-|   |   |   |           ├── _mixins.less
-|   |   |   |           ├── _options.less
-|   |   |   |           └── animate.less
+|   |   |   |       +-- less/
+|   |   |   |           +-- _mixins.less
+|   |   |   |           +-- _options.less
+|   |   |   |           +-- animate.less
 |   |   |   |
-|   |   |   └── lesshat/
-|   |   |       └── lesshat-prefixed.less
+|   |   |   +-- lesshat/
+|   |   |       +-- lesshat-prefixed.less
 |   |   |
-│   │   ├── print.css
-│   │   └── style.css
+¦   ¦   +-- print.css
+¦   ¦   +-- style.css
 |   |
-│   ├── js/
-│   │   ├── helpers/
-│   │   |   ├── font-awesome/
-│   │   |   |   └── svg-with-js/
-│   │   |   |       ├── css/
-│   │   |   |       |   └── fa-svg-with-js.css
+¦   +-- js/
+¦   ¦   +-- helpers/
+¦   ¦   |   +-- font-awesome/
+¦   ¦   |   |   +-- svg-with-js/
+¦   ¦   |   |       +-- css/
+¦   ¦   |   |       |   +-- fa-svg-with-js.css
 |   |   |   |       |
-│   │   |   |       └── js/
-│   │   |   |           ├── fa-brands.js
-│   │   |   |           ├── fa-brands.min.js
-│   │   |   |           ├── fa-regular.js
-│   │   |   |           ├── fa-regular.min.js
-│   │   |   |           ├── fa-solid.js
-│   │   |   |           ├── fa-solid.min.js
-│   │   |   |           ├── fa-v4-shims.js
-│   │   |   |           ├── fa-v4-shims.min.js
-│   │   |   |           ├── fontawesome.js
-│   │   |   |           ├── fontawesome.min.js
-│   │   |   |           ├── fontawesome-all.js
-│   │   |   |           └── fontawesome-all.min.js
+¦   ¦   |   |       +-- js/
+¦   ¦   |   |           +-- fa-brands.js
+¦   ¦   |   |           +-- fa-brands.min.js
+¦   ¦   |   |           +-- fa-regular.js
+¦   ¦   |   |           +-- fa-regular.min.js
+¦   ¦   |   |           +-- fa-solid.js
+¦   ¦   |   |           +-- fa-solid.min.js
+¦   ¦   |   |           +-- fa-v4-shims.js
+¦   ¦   |   |           +-- fa-v4-shims.min.js
+¦   ¦   |   |           +-- fontawesome.js
+¦   ¦   |   |           +-- fontawesome.min.js
+¦   ¦   |   |           +-- fontawesome-all.js
+¦   ¦   |   |           +-- fontawesome-all.min.js
 |   |   |   |
-│   │   |   ├── iScroll/
-│   │   |   |   └── build/
-│   │   |   |       ├── iscroll.js
-│   │   |   |       ├── iscroll.min.js
-│   │   |   |       ├── iscroll-infinite.js
-│   │   |   |       ├── iscroll-infinite.min.js
-│   │   |   |       ├── iscroll-lite.js
-│   │   |   |       ├── iscroll-lite.min.js
-│   │   |   |       ├── iscroll-probe.js
-│   │   |   |       ├── iscroll-probe.min.js
-│   │   |   |       ├── iscroll-zoom.js
-│   │   |   |       └── iscroll-zoom.min.js
+¦   ¦   |   +-- iScroll/
+¦   ¦   |   |   +-- build/
+¦   ¦   |   |       +-- iscroll.js
+¦   ¦   |   |       +-- iscroll.min.js
+¦   ¦   |   |       +-- iscroll-infinite.js
+¦   ¦   |   |       +-- iscroll-infinite.min.js
+¦   ¦   |   |       +-- iscroll-lite.js
+¦   ¦   |   |       +-- iscroll-lite.min.js
+¦   ¦   |   |       +-- iscroll-probe.js
+¦   ¦   |   |       +-- iscroll-probe.min.js
+¦   ¦   |   |       +-- iscroll-zoom.js
+¦   ¦   |   |       +-- iscroll-zoom.min.js
 |   |   |   |
-│   │   |   ├── ViewerJS/
-│   │   |   |   ├── images/
-│   │   |   |   |   ├── kogmbh.png
-│   │   |   |   |   ├── nlnet.png
-│   │   |   |   |   ├── texture.png
-│   │   |   |   |   ├── toolbarButton-download.png
-│   │   |   |   |   ├── toolbarButton-fullscreen.png
-│   │   |   |   |   ├── toolbarButton-menuArrows.png
-│   │   |   |   |   ├── toolbarButton-pageDown.png
-│   │   |   |   |   ├── toolbarButton-pageUp.png
-│   │   |   |   |   ├── toolbarButton-presentation.png
-│   │   |   |   |   ├── toolbarButton-zoomIn.png
-│   │   |   |   |   └── toolbarButton-zoomOut.png
-│   │   |   |   |
-│   │   |   |   ├── tools/
-│   │   |   |   |   └── replaceByFileContents.js
+¦   ¦   |   +-- ViewerJS/
+¦   ¦   |   |   +-- images/
+¦   ¦   |   |   |   +-- kogmbh.png
+¦   ¦   |   |   |   +-- nlnet.png
+¦   ¦   |   |   |   +-- texture.png
+¦   ¦   |   |   |   +-- toolbarButton-download.png
+¦   ¦   |   |   |   +-- toolbarButton-fullscreen.png
+¦   ¦   |   |   |   +-- toolbarButton-menuArrows.png
+¦   ¦   |   |   |   +-- toolbarButton-pageDown.png
+¦   ¦   |   |   |   +-- toolbarButton-pageUp.png
+¦   ¦   |   |   |   +-- toolbarButton-presentation.png
+¦   ¦   |   |   |   +-- toolbarButton-zoomIn.png
+¦   ¦   |   |   |   +-- toolbarButton-zoomOut.png
+¦   ¦   |   |   |
+¦   ¦   |   |   +-- tools/
+¦   ¦   |   |   |   +-- replaceByFileContents.js
 |   |   |   |   |
-│   │   |   |   ├── example.local.css
-│   │   |   |   ├── HeaderCompiled.html
-│   │   |   |   ├── HeaderCompiled.js
-│   │   |   |   ├── index.html
-│   │   |   |   ├── index-template.html
-│   │   |   |   ├── ODFViewerPlugin.css
-│   │   |   |   ├── ODFViewerPlugin.js
-│   │   |   |   ├── PDFViewerPlugin.css
-│   │   |   |   ├── PDFViewerPlugin.js
-│   │   |   |   ├── PluginLoader.js
-│   │   |   |   ├── viewer.css
-│   │   |   |   ├── viewer.js
-│   │   |   |   └── viewerTouch.css
+¦   ¦   |   |   +-- example.local.css
+¦   ¦   |   |   +-- HeaderCompiled.html
+¦   ¦   |   |   +-- HeaderCompiled.js
+¦   ¦   |   |   +-- index.html
+¦   ¦   |   |   +-- index-template.html
+¦   ¦   |   |   +-- ODFViewerPlugin.css
+¦   ¦   |   |   +-- ODFViewerPlugin.js
+¦   ¦   |   |   +-- PDFViewerPlugin.css
+¦   ¦   |   |   +-- PDFViewerPlugin.js
+¦   ¦   |   |   +-- PluginLoader.js
+¦   ¦   |   |   +-- viewer.css
+¦   ¦   |   |   +-- viewer.js
+¦   ¦   |   |   +-- viewerTouch.css
 |   |   |   |
-│   │   |   ├── basil.min.js
-│   │   |   ├── holder.min.js
-│   │   |   ├── modernizr-custom.js
-│   │   |   ├── popper.min.js
-│   │   |   ├── sprintf.min.js
-│   │   |   ├── underscore.string.min.js
-│   │   |   └── underscore-min.js
+¦   ¦   |   +-- basil.min.js
+¦   ¦   |   +-- holder.min.js
+¦   ¦   |   +-- modernizr-custom.js
+¦   ¦   |   +-- popper.min.js
+¦   ¦   |   +-- sprintf.min.js
+¦   ¦   |   +-- underscore.string.min.js
+¦   ¦   |   +-- underscore-min.js
 |   |   |
-│   │   ├── jquery/
-│   │   |   ├── ui/
-│   │   |   |   ├── images/
-│   │   |   |   |   ├── ui-icons_444444_256x240.png
-│   │   |   |   |   ├── ui-icons_555555_256x240.png
-│   │   |   |   |   ├── ui-icons_777620_256x240.png
-│   │   |   |   |   ├── ui-icons_777777_256x240.png
-│   │   |   |   |   ├── ui-icons_cc0000_256x240.png
-│   │   |   |   |   └── ui-icons_ffffff_256x240.png
+¦   ¦   +-- jquery/
+¦   ¦   |   +-- ui/
+¦   ¦   |   |   +-- images/
+¦   ¦   |   |   |   +-- ui-icons_444444_256x240.png
+¦   ¦   |   |   |   +-- ui-icons_555555_256x240.png
+¦   ¦   |   |   |   +-- ui-icons_777620_256x240.png
+¦   ¦   |   |   |   +-- ui-icons_777777_256x240.png
+¦   ¦   |   |   |   +-- ui-icons_cc0000_256x240.png
+¦   ¦   |   |   |   +-- ui-icons_ffffff_256x240.png
 |   |   |   |   |
-│   │   |   |   ├── jquery-ui.css
-│   │   |   |   ├── jquery-ui.js
-│   │   |   |   ├── jquery-ui.min.css
-│   │   |   |   ├── jquery-ui.min.js
-│   │   |   |   ├── jquery-ui.structure.css
-│   │   |   |   ├── jquery-ui.structure.min.css
-│   │   |   |   ├── jquery-ui.theme.css
-│   │   |   |   └── jquery-ui.theme.min.css
+¦   ¦   |   |   +-- jquery-ui.css
+¦   ¦   |   |   +-- jquery-ui.js
+¦   ¦   |   |   +-- jquery-ui.min.css
+¦   ¦   |   |   +-- jquery-ui.min.js
+¦   ¦   |   |   +-- jquery-ui.structure.css
+¦   ¦   |   |   +-- jquery-ui.structure.min.css
+¦   ¦   |   |   +-- jquery-ui.theme.css
+¦   ¦   |   |   +-- jquery-ui.theme.min.css
 |   |   |   |
-│   │   |   └── jquery.min.js
+¦   ¦   |   +-- jquery.min.js
 |   |   |
-│   │   ├── plugins/
-│   │   |   ├── dialog/
-│   │   |   |   └── dist/
-│   │   |   |       ├── dialog.js
-│   │   |   |       └── dialog.min.js
+¦   ¦   +-- plugins/
+¦   ¦   |   +-- dialog/
+¦   ¦   |   |   +-- dist/
+¦   ¦   |   |       +-- dialog.js
+¦   ¦   |   |       +-- dialog.min.js
 |   |   |   |
-│   │   |   └── veeva/
-│   │   |       └── dist/
-│   │   |           ├── veeva.js
-│   │   |           ├── veeva-library.js
-│   │   |           ├── veeva-library.min.js
-│   │   |           └── veeva.min.js
+¦   ¦   |   +-- veeva/
+¦   ¦   |       +-- dist/
+¦   ¦   |           +-- veeva.js
+¦   ¦   |           +-- veeva-library.js
+¦   ¦   |           +-- veeva-library.min.js
+¦   ¦   |           +-- veeva.min.js
 |   |   |
-│   |   ├── libraries.js
-│   |   ├── mochi.js
-│   |   └── mochi.min.js
+¦   |   +-- libraries.js
+¦   |   +-- mochi.js
+¦   |   +-- mochi.min.js
 |   |
-│   └── less/
-│       ├── _2dppx_375up.less
-│       ├── _2dppx_425up.less
-│       ├── _2dppx_480up.less
-│       ├── _2dppx_576up.less
-│       ├── _2dppx_750up.less
-│       ├── _2dppx_768up.less
-│       ├── _2dppx_970up.less
-│       ├── _2dppx_992up.less
-│       ├── _2dppx_1020up.less
-│       ├── _2dppx_1024up.less
-│       ├── _2dppx_1170up.less
-│       ├── _2dppx_1200up.less
-│       ├── _2dppx_1440up.less
-│       ├── _2dppx_1560up.less
-│       ├── _2dppx_2560up.less
-│       ├── _2dppx_base.less
-│       ├── _375up.less
-│       ├── _425up.less
-│       ├── _480up.less
-│       ├── _576up.less
-│       ├── _750up.less
-│       ├── _768up.less
-│       ├── _970up.less
-│       ├── _992up.less
-│       ├── _1020up.less
-│       ├── _1024up.less
-│       ├── _1170up.less
-│       ├── _1200up.less
-│       ├── _1440up.less
-│       ├── _1560up.less
-│       ├── _2560up.less
-│       ├── _base.less
-│       ├── _mixins.less
-│       ├── _notouch.less
-│       └── _print.less
+¦   +-- less/
+¦       +-- _2dppx_375up.less
+¦       +-- _2dppx_425up.less
+¦       +-- _2dppx_480up.less
+¦       +-- _2dppx_576up.less
+¦       +-- _2dppx_750up.less
+¦       +-- _2dppx_768up.less
+¦       +-- _2dppx_970up.less
+¦       +-- _2dppx_992up.less
+¦       +-- _2dppx_1020up.less
+¦       +-- _2dppx_1024up.less
+¦       +-- _2dppx_1170up.less
+¦       +-- _2dppx_1200up.less
+¦       +-- _2dppx_1440up.less
+¦       +-- _2dppx_1560up.less
+¦       +-- _2dppx_2560up.less
+¦       +-- _2dppx_base.less
+¦       +-- _375up.less
+¦       +-- _425up.less
+¦       +-- _480up.less
+¦       +-- _576up.less
+¦       +-- _750up.less
+¦       +-- _768up.less
+¦       +-- _970up.less
+¦       +-- _992up.less
+¦       +-- _1020up.less
+¦       +-- _1024up.less
+¦       +-- _1170up.less
+¦       +-- _1200up.less
+¦       +-- _1440up.less
+¦       +-- _1560up.less
+¦       +-- _2560up.less
+¦       +-- _base.less
+¦       +-- _mixins.less
+¦       +-- _notouch.less
+¦       +-- _print.less
 |
-├── .htaccess
-├── index.html
-├── manifest.json
-├── offline.html
-├── project.appcache
-├── robots.txt
-└── sw.js
++-- .htaccess
++-- index.html
++-- manifest.json
++-- offline.html
++-- project.appcache
++-- robots.txt
++-- sw.js
 ```
 
 ___
@@ -332,7 +332,7 @@ In addition to the media breakpoints listed above, the following import files ar
 _**Note:** When importing the folder **`dist/frontend/less`** into your Less.js compiler please make sure only the **`print.less`** and **`style.less`** files are compiled to CSS, and not the files prefixed with an underscore._
 
 ## Predefined Mixins
-Some useful Less mixins are included to help streamline development of CSS in your project. We recommed having a look at [**`dist/mochi/less/_mixins.less`**](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/less/_mixins.less) to see what's included in our [standard distribution package](https://github.com/codeworksdev/mochi/releases/latest).
+Some useful Less mixins are included to help streamline development of CSS in your project. We recommend having a look at [**`dist/mochi/less/_mixins.less`**](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/less/_mixins.less) to see what's included in our [standard distribution package](https://github.com/codeworksdev/mochi/releases/latest).
 
 _**Note:** We've included an empty mixins file at **`dist/frontend/_mixins.less`**. If you'd like to define your own mixins in your project, we strongly recommend editing this empty file instead of the predefined mixins file inside the **`dist/mochi`** folder._
 
