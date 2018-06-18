@@ -1,5 +1,5 @@
 /*!
- * Mochi v1.5 (https://github.com/codeworksdev/mochi)
+ * Mochi v1.5.1 (https://github.com/codeworksdev/mochi)
  * Copyright (c) 2014-2018 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
@@ -328,7 +328,7 @@ Mochi.prototype =
         return this
     },
 
-    extend : function(k, c, f)
+    extend : function(k, c, m, f)
     {
         if (
           k
@@ -387,14 +387,18 @@ Mochi.prototype =
               && !_.has(this, k)
               && _.isFunction(c))
             {
-                this.log('extend: $m.'+k+' = new '+c.name+'()');
-                eval('this[k]=new c');
+                var meta = (m && this.isSimpleObj(m)) ? JSON.parse(JSON.stringify(m)) : {},
+                    func = (m && _.isFunction(m)) ? m : f,
+                    json = JSON.stringify(meta);
+
+                this.log('extend: $m.'+k+' = new '+c.name+'('+json+')');
+                eval('this[k]=new c(meta)');
 
                 if (
-                  f
-                  && _.isFunction(f))
+                  func
+                  && _.isFunction(func))
                 {
-                    f.call(this[k])
+                    func.apply(this[k], meta)
                 }
 
                 return this

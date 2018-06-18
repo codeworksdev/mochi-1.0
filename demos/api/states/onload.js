@@ -65,6 +65,7 @@ $(document).ready(
         $m.extend(
             'app',
             MyMochiApplication,
+            {},
             function() {
                 if (this.onload) this.onload()
                 }
@@ -78,7 +79,7 @@ $(document).ready(
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 */
 
-function MyMochiApplication()
+function MyMochiApplication(meta)
 {
     this._vars();
     this._html();

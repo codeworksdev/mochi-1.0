@@ -19,7 +19,6 @@ function mochi_init()
 */
 
 function mochi_before       ()         {};
-function mochi_init         ()         {};
 function mochi_load         (data)     {};
 function mochi_load_page    (data)     {};
 function mochi_load_page0   (data)     {};
@@ -46,6 +45,7 @@ $(document).ready(
         $m.extend(
             'app',
             MyMochiApplication,
+            {},
             function() {
                 if (this.onload) this.onload()
                 }
@@ -59,7 +59,7 @@ $(document).ready(
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 */
 
-function MyMochiApplication()
+function MyMochiApplication(meta)
 {
     this._options();
     this._html();

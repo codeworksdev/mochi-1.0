@@ -1,7 +1,7 @@
 # Mochi
 _Front-end framework for developing responsive, mobile first projects on the web or offline._
 
-> [**v1.5**](https://github.com/codeworksdev/mochi/releases/latest)
+> [**v1.5.1**](https://github.com/codeworksdev/mochi/releases/latest)
 
 Mochi is a ready-to-deploy HTML5 boilerplate framework that runs on [Bootstrap](http://getbootstrap.com/), but adds tons of new features, with a strong focus on offline web applications without all the limitations. It achieves this goal by fully integrating and maintaining offline versions of popular libraries that have been out in the wild for years.
 
@@ -19,247 +19,241 @@ Within the download you'll find the following directories and files, logically g
 
 ```
 dist/
-+-- bootstrap/
-¦   +-- css/
-¦   ¦   +-- bootstrap.css
-¦   ¦   +-- bootstrap.min.css
-¦   ¦   +-- bootstrap-grid.css
-¦   ¦   +-- bootstrap-grid.min.css
-¦   ¦   +-- bootstrap-reboot.css
-¦   ¦   +-- bootstrap-reboot.min.css
-|   |
-¦   +-- js/
-¦       +-- bootstrap.bundle.js
-¦       +-- bootstrap.bundle.min.js
-¦       +-- bootstrap.js
-¦       +-- bootstrap.min.js
-|
-+-- frontend/
-¦   +-- css/
-¦   ¦   +-- print.css
-¦   ¦   +-- style.css
-|   |
-¦   +-- img/
-¦   ¦   +-- brand/
-¦   ¦       +-- launcher-icon-1x.pmg
-¦   ¦       +-- launcher-icon-4x.pmg
-|   |
-¦   +-- js/
-¦   |   +-- onload.js
-|   |
-¦   +-- less/
-¦       +-- _2dppx_375up.less
-¦       +-- _2dppx_425up.less
-¦       +-- _2dppx_480up.less
-¦       +-- _2dppx_576up.less
-¦       +-- _2dppx_750up.less
-¦       +-- _2dppx_768up.less
-¦       +-- _2dppx_970up.less
-¦       +-- _2dppx_992up.less
-¦       +-- _2dppx_1020up.less
-¦       +-- _2dppx_1024up.less
-¦       +-- _2dppx_1170up.less
-¦       +-- _2dppx_1200up.less
-¦       +-- _2dppx_1440up.less
-¦       +-- _2dppx_1560up.less
-¦       +-- _2dppx_2560up.less
-¦       +-- _2dppx_base.less
-¦       +-- _375up.less
-¦       +-- _425up.less
-¦       +-- _480up.less
-¦       +-- _576up.less
-¦       +-- _750up.less
-¦       +-- _768up.less
-¦       +-- _970up.less
-¦       +-- _992up.less
-¦       +-- _1020up.less
-¦       +-- _1024up.less
-¦       +-- _1170up.less
-¦       +-- _1200up.less
-¦       +-- _1440up.less
-¦       +-- _1560up.less
-¦       +-- _2560up.less
-¦       +-- _base.less
-¦       +-- _mixins.less
-¦       +-- _notouch.less
-¦       +-- _print.less
-¦       +-- print.less
-¦       +-- style.less
-|
-+-- mochi/
-¦   +-- css/
-¦   ¦   +-- helpers/
-|   |   |   +-- animate.less/
-|   |   |   |   +-- dist/
-|   |   |   |       +-- css/
-|   |   |   |       |   +-- animate.css
-|   |   |   |       |
-|   |   |   |       +-- less/
-|   |   |   |           +-- _mixins.less
-|   |   |   |           +-- _options.less
-|   |   |   |           +-- animate.less
-|   |   |   |
-|   |   |   +-- lesshat/
-|   |   |       +-- lesshat-prefixed.less
-|   |   |
-¦   ¦   +-- print.css
-¦   ¦   +-- style.css
-|   |
-¦   +-- js/
-¦   ¦   +-- helpers/
-¦   ¦   |   +-- font-awesome/
-¦   ¦   |   |   +-- svg-with-js/
-¦   ¦   |   |       +-- css/
-¦   ¦   |   |       |   +-- fa-svg-with-js.css
-|   |   |   |       |
-¦   ¦   |   |       +-- js/
-¦   ¦   |   |           +-- fa-brands.js
-¦   ¦   |   |           +-- fa-brands.min.js
-¦   ¦   |   |           +-- fa-regular.js
-¦   ¦   |   |           +-- fa-regular.min.js
-¦   ¦   |   |           +-- fa-solid.js
-¦   ¦   |   |           +-- fa-solid.min.js
-¦   ¦   |   |           +-- fa-v4-shims.js
-¦   ¦   |   |           +-- fa-v4-shims.min.js
-¦   ¦   |   |           +-- fontawesome.js
-¦   ¦   |   |           +-- fontawesome.min.js
-¦   ¦   |   |           +-- fontawesome-all.js
-¦   ¦   |   |           +-- fontawesome-all.min.js
-|   |   |   |
-¦   ¦   |   +-- iScroll/
-¦   ¦   |   |   +-- build/
-¦   ¦   |   |       +-- iscroll.js
-¦   ¦   |   |       +-- iscroll.min.js
-¦   ¦   |   |       +-- iscroll-infinite.js
-¦   ¦   |   |       +-- iscroll-infinite.min.js
-¦   ¦   |   |       +-- iscroll-lite.js
-¦   ¦   |   |       +-- iscroll-lite.min.js
-¦   ¦   |   |       +-- iscroll-probe.js
-¦   ¦   |   |       +-- iscroll-probe.min.js
-¦   ¦   |   |       +-- iscroll-zoom.js
-¦   ¦   |   |       +-- iscroll-zoom.min.js
-|   |   |   |
-¦   ¦   |   +-- ViewerJS/
-¦   ¦   |   |   +-- images/
-¦   ¦   |   |   |   +-- kogmbh.png
-¦   ¦   |   |   |   +-- nlnet.png
-¦   ¦   |   |   |   +-- texture.png
-¦   ¦   |   |   |   +-- toolbarButton-download.png
-¦   ¦   |   |   |   +-- toolbarButton-fullscreen.png
-¦   ¦   |   |   |   +-- toolbarButton-menuArrows.png
-¦   ¦   |   |   |   +-- toolbarButton-pageDown.png
-¦   ¦   |   |   |   +-- toolbarButton-pageUp.png
-¦   ¦   |   |   |   +-- toolbarButton-presentation.png
-¦   ¦   |   |   |   +-- toolbarButton-zoomIn.png
-¦   ¦   |   |   |   +-- toolbarButton-zoomOut.png
-¦   ¦   |   |   |
-¦   ¦   |   |   +-- tools/
-¦   ¦   |   |   |   +-- replaceByFileContents.js
-|   |   |   |   |
-¦   ¦   |   |   +-- example.local.css
-¦   ¦   |   |   +-- HeaderCompiled.html
-¦   ¦   |   |   +-- HeaderCompiled.js
-¦   ¦   |   |   +-- index.html
-¦   ¦   |   |   +-- index-template.html
-¦   ¦   |   |   +-- ODFViewerPlugin.css
-¦   ¦   |   |   +-- ODFViewerPlugin.js
-¦   ¦   |   |   +-- PDFViewerPlugin.css
-¦   ¦   |   |   +-- PDFViewerPlugin.js
-¦   ¦   |   |   +-- PluginLoader.js
-¦   ¦   |   |   +-- viewer.css
-¦   ¦   |   |   +-- viewer.js
-¦   ¦   |   |   +-- viewerTouch.css
-|   |   |   |
-¦   ¦   |   +-- basil.min.js
-¦   ¦   |   +-- holder.min.js
-¦   ¦   |   +-- modernizr-custom.js
-¦   ¦   |   +-- popper.min.js
-¦   ¦   |   +-- sprintf.min.js
-¦   ¦   |   +-- underscore.string.min.js
-¦   ¦   |   +-- underscore-min.js
-|   |   |
-¦   ¦   +-- jquery/
-¦   ¦   |   +-- ui/
-¦   ¦   |   |   +-- images/
-¦   ¦   |   |   |   +-- ui-icons_444444_256x240.png
-¦   ¦   |   |   |   +-- ui-icons_555555_256x240.png
-¦   ¦   |   |   |   +-- ui-icons_777620_256x240.png
-¦   ¦   |   |   |   +-- ui-icons_777777_256x240.png
-¦   ¦   |   |   |   +-- ui-icons_cc0000_256x240.png
-¦   ¦   |   |   |   +-- ui-icons_ffffff_256x240.png
-|   |   |   |   |
-¦   ¦   |   |   +-- jquery-ui.css
-¦   ¦   |   |   +-- jquery-ui.js
-¦   ¦   |   |   +-- jquery-ui.min.css
-¦   ¦   |   |   +-- jquery-ui.min.js
-¦   ¦   |   |   +-- jquery-ui.structure.css
-¦   ¦   |   |   +-- jquery-ui.structure.min.css
-¦   ¦   |   |   +-- jquery-ui.theme.css
-¦   ¦   |   |   +-- jquery-ui.theme.min.css
-|   |   |   |
-¦   ¦   |   +-- jquery.min.js
-|   |   |
-¦   ¦   +-- plugins/
-¦   ¦   |   +-- dialog/
-¦   ¦   |   |   +-- dist/
-¦   ¦   |   |       +-- dialog.js
-¦   ¦   |   |       +-- dialog.min.js
-|   |   |   |
-¦   ¦   |   +-- veeva/
-¦   ¦   |       +-- dist/
-¦   ¦   |           +-- veeva.js
-¦   ¦   |           +-- veeva-library.js
-¦   ¦   |           +-- veeva-library.min.js
-¦   ¦   |           +-- veeva.min.js
-|   |   |
-¦   |   +-- libraries.js
-¦   |   +-- mochi.js
-¦   |   +-- mochi.min.js
-|   |
-¦   +-- less/
-¦       +-- _2dppx_375up.less
-¦       +-- _2dppx_425up.less
-¦       +-- _2dppx_480up.less
-¦       +-- _2dppx_576up.less
-¦       +-- _2dppx_750up.less
-¦       +-- _2dppx_768up.less
-¦       +-- _2dppx_970up.less
-¦       +-- _2dppx_992up.less
-¦       +-- _2dppx_1020up.less
-¦       +-- _2dppx_1024up.less
-¦       +-- _2dppx_1170up.less
-¦       +-- _2dppx_1200up.less
-¦       +-- _2dppx_1440up.less
-¦       +-- _2dppx_1560up.less
-¦       +-- _2dppx_2560up.less
-¦       +-- _2dppx_base.less
-¦       +-- _375up.less
-¦       +-- _425up.less
-¦       +-- _480up.less
-¦       +-- _576up.less
-¦       +-- _750up.less
-¦       +-- _768up.less
-¦       +-- _970up.less
-¦       +-- _992up.less
-¦       +-- _1020up.less
-¦       +-- _1024up.less
-¦       +-- _1170up.less
-¦       +-- _1200up.less
-¦       +-- _1440up.less
-¦       +-- _1560up.less
-¦       +-- _2560up.less
-¦       +-- _base.less
-¦       +-- _mixins.less
-¦       +-- _notouch.less
-¦       +-- _print.less
-|
-+-- .htaccess
-+-- index.html
-+-- manifest.json
-+-- offline.html
-+-- project.appcache
-+-- robots.txt
-+-- sw.js
+├── bootstrap/
+│   ├── css/
+│   │   ├── bootstrap.css
+│   │   ├── bootstrap.min.css
+│   │   ├── bootstrap-grid.css
+│   │   ├── bootstrap-grid.min.css
+│   │   ├── bootstrap-reboot.css
+│   │   └── bootstrap-reboot.min.css
+│   │
+│   └── js/
+│       ├── bootstrap.bundle.js
+│       ├── bootstrap.bundle.min.js
+│       ├── bootstrap.js
+│       └── bootstrap.min.js
+│
+├── frontend/
+│   ├── css/
+│   │   ├── print.css
+│   │   └── style.css
+│   │
+│   ├── img/
+│   │   └── brand/
+│   │       ├── launcher-icon-1x.pmg
+│   │       └── launcher-icon-4x.pmg
+│   │
+│   ├── js/
+│   │   └── onload.js
+│   │
+│   └── less/
+│       ├── _2dppx_375up.less
+│       ├── _2dppx_425up.less
+│       ├── _2dppx_480up.less
+│       ├── _2dppx_576up.less
+│       ├── _2dppx_750up.less
+│       ├── _2dppx_768up.less
+│       ├── _2dppx_970up.less
+│       ├── _2dppx_992up.less
+│       ├── _2dppx_1020up.less
+│       ├── _2dppx_1024up.less
+│       ├── _2dppx_1170up.less
+│       ├── _2dppx_1200up.less
+│       ├── _2dppx_1440up.less
+│       ├── _2dppx_1560up.less
+│       ├── _2dppx_2560up.less
+│       ├── _2dppx_base.less
+│       ├── _375up.less
+│       ├── _425up.less
+│       ├── _480up.less
+│       ├── _576up.less
+│       ├── _750up.less
+│       ├── _768up.less
+│       ├── _970up.less
+│       ├── _992up.less
+│       ├── _1020up.less
+│       ├── _1024up.less
+│       ├── _1170up.less
+│       ├── _1200up.less
+│       ├── _1440up.less
+│       ├── _1560up.less
+│       ├── _2560up.less
+│       ├── _base.less
+│       ├── _mixins.less
+│       ├── _notouch.less
+│       ├── _print.less
+│       ├── print.less
+│       └── style.less
+│
+├── mochi/
+│   ├── css/
+│   │   └── helpers/
+│   │       └── animate.less/
+│   │           └── dist/
+│   │               ├── css/
+│   │               │   └── animate.css
+│   │               │
+│   │               └── less/
+│   │                   ├── _mixins.less
+│   │                   ├── _options.less
+│   │                   └── animate.less
+│   │
+│   ├── js/
+│   │   ├── helpers/
+│   │   │   ├── font-awesome/
+│   │   │   │   └── svg-with-js/
+│   │   │   │       ├── css/
+│   │   │   │       │   └── fa-svg-with-js.css
+│   │   │   │       │
+│   │   │   │       └── js/
+│   │   │   │           ├── fa-brands.js
+│   │   │   │           ├── fa-brands.min.js
+│   │   │   │           ├── fa-regular.js
+│   │   │   │           ├── fa-regular.min.js
+│   │   │   │           ├── fa-solid.js
+│   │   │   │           ├── fa-solid.min.js
+│   │   │   │           ├── fa-v4-shims.js
+│   │   │   │           ├── fa-v4-shims.min.js
+│   │   │   │           ├── fontawesome.js
+│   │   │   │           ├── fontawesome.min.js
+│   │   │   │           ├── fontawesome-all.js
+│   │   │   │           └── fontawesome-all.min.js
+│   │   │   │
+│   │   │   ├── iScroll/
+│   │   │   │   └── build/
+│   │   │   │       ├── iscroll.js
+│   │   │   │       ├── iscroll.min.js
+│   │   │   │       ├── iscroll-infinite.js
+│   │   │   │       ├── iscroll-infinite.min.js
+│   │   │   │       ├── iscroll-lite.js
+│   │   │   │       ├── iscroll-lite.min.js
+│   │   │   │       ├── iscroll-probe.js
+│   │   │   │       ├── iscroll-probe.min.js
+│   │   │   │       ├── iscroll-zoom.js
+│   │   │   │       └── iscroll-zoom.min.js
+│   │   │   │
+│   │   │   ├── ViewerJS/
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── kogmbh.png
+│   │   │   │   │   ├── nlnet.png
+│   │   │   │   │   ├── texture.png
+│   │   │   │   │   ├── toolbarButton-download.png
+│   │   │   │   │   ├── toolbarButton-fullscreen.png
+│   │   │   │   │   ├── toolbarButton-menuArrows.png
+│   │   │   │   │   ├── toolbarButton-pageDown.png
+│   │   │   │   │   ├── toolbarButton-pageUp.png
+│   │   │   │   │   ├── toolbarButton-presentation.png
+│   │   │   │   │   ├── toolbarButton-zoomIn.png
+│   │   │   │   │   └── toolbarButton-zoomOut.png
+│   │   │   │   │
+│   │   │   │   ├── tools/
+│   │   │   │   │   └── replaceByFileContents.js
+│   │   │   │   │
+│   │   │   │   ├── example.local.css
+│   │   │   │   ├── HeaderCompiled.html
+│   │   │   │   ├── HeaderCompiled.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── index-template.html
+│   │   │   │   ├── ODFViewerPlugin.css
+│   │   │   │   ├── ODFViewerPlugin.js
+│   │   │   │   ├── PDFViewerPlugin.css
+│   │   │   │   ├── PDFViewerPlugin.js
+│   │   │   │   ├── PluginLoader.js
+│   │   │   │   ├── viewer.css
+│   │   │   │   ├── viewer.js
+│   │   │   │   └── viewerTouch.css
+│   │   │   │
+│   │   │   ├── basil.min.js
+│   │   │   ├── holder.min.js
+│   │   │   ├── modernizr-custom.js
+│   │   │   ├── popper.min.js
+│   │   │   ├── sprintf.min.js
+│   │   │   ├── underscore.string.min.js
+│   │   │   └── underscore-min.js
+│   │   │
+│   │   ├── jquery/
+│   │   │   ├── ui/
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── ui-icons_444444_256x240.png
+│   │   │   │   │   ├── ui-icons_555555_256x240.png
+│   │   │   │   │   ├── ui-icons_777620_256x240.png
+│   │   │   │   │   ├── ui-icons_777777_256x240.png
+│   │   │   │   │   ├── ui-icons_cc0000_256x240.png
+│   │   │   │   │   └── ui-icons_ffffff_256x240.png
+│   │   │   │   │
+│   │   │   │   ├── jquery-ui.css
+│   │   │   │   ├── jquery-ui.js
+│   │   │   │   ├── jquery-ui.min.css
+│   │   │   │   ├── jquery-ui.min.js
+│   │   │   │   ├── jquery-ui.structure.css
+│   │   │   │   ├── jquery-ui.structure.min.css
+│   │   │   │   ├── jquery-ui.theme.css
+│   │   │   │   └── jquery-ui.theme.min.css
+│   │   │   │
+│   │   │   └── jquery.min.js
+│   │   │
+│   │   ├── plugins/
+│   │   │   ├── dialog/
+│   │   │   │   └── dist/
+│   │   │   │       ├── dialog.js
+│   │   │   │       └── dialog.min.js
+│   │   │   │
+│   │   │   └── veeva/
+│   │   │       └── dist/
+│   │   │           ├── veeva.js
+│   │   │           ├── veeva-library.js
+│   │   │           ├── veeva-library.min.js
+│   │   │           └── veeva.min.js
+│   │   │
+│   │   ├── libraries.js
+│   │   ├── mochi.js
+│   │   └── mochi.min.js
+│   │
+│   └── less/
+│       ├── _2dppx_375up.less
+│       ├── _2dppx_425up.less
+│       ├── _2dppx_480up.less
+│       ├── _2dppx_576up.less
+│       ├── _2dppx_750up.less
+│       ├── _2dppx_768up.less
+│       ├── _2dppx_970up.less
+│       ├── _2dppx_992up.less
+│       ├── _2dppx_1020up.less
+│       ├── _2dppx_1024up.less
+│       ├── _2dppx_1170up.less
+│       ├── _2dppx_1200up.less
+│       ├── _2dppx_1440up.less
+│       ├── _2dppx_1560up.less
+│       ├── _2dppx_2560up.less
+│       ├── _2dppx_base.less
+│       ├── _375up.less
+│       ├── _425up.less
+│       ├── _480up.less
+│       ├── _576up.less
+│       ├── _750up.less
+│       ├── _768up.less
+│       ├── _970up.less
+│       ├── _992up.less
+│       ├── _1020up.less
+│       ├── _1024up.less
+│       ├── _1170up.less
+│       ├── _1200up.less
+│       ├── _1440up.less
+│       ├── _1560up.less
+│       ├── _2560up.less
+│       ├── _base.less
+│       ├── _mixins.less
+│       ├── _notouch.less
+│       └── _print.less
+│
+├── .htaccess
+├── index.html
+├── manifest.json
+├── offline.html
+├── project.appcache
+├── robots.txt
+└── sw.js
 ```
 
 ___
@@ -277,7 +271,6 @@ One of the major advantages of using Mochi is that it comes packed with many use
 | iScroll | 5.2 | http://iscrolljs.com/ |
 | jQuery | 3.3.1 | http://jquery.com/ |
 | jQuery UI | 1.12.1 | https://jqueryui.com/ |
-| LESS Hat | 4.1 | http://lesshat.madebysource.com/ |
 | Modernizr | 3.5 | https://modernizr.com/ |
 | Popper.js | 1.14.3 | https://popper.js.org/ |
 | sprintf-js | 1.1.1 | https://www.npmjs.com/package/sprintf-js |
@@ -339,8 +332,6 @@ _**Note:** We've included an empty mixins file at **`dist/frontend/_mixins.less`
 ## Animate.less
 [Animate.less](http://animateforless.com/) is a powerful [CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) framework for animating HTML elements in a [script-less](https://github.com/codeworksdev/animate.less#script-less-animations) format. Mochi automatically imports this library into your project, allowing you to take full advantage of the many predefined animations already included. You can even build your own animations with this framework! More information [here](http://animateforless.com/).
 
-## LESS Hat Mixins Library
-In addition to the predefined mixins file, we've also included a powerful 3rd-party library with over 80 predefined cross-browser mixins. More information [here](http://lesshat.madebysource.com/).
 ___
 # Caching System
 Mochi includes a fully functional [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) (in [**`dist/sw.js`**](https://github.com/codeworksdev/mochi/blob/master/dist/sw.js)) for developing high-performance websites and offline apps, complete with push notifications and automated updates. It's disabled by default, but you can easily enable it using the [Mochi API](#api). More information about the standard Service Worker API [here](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API).
