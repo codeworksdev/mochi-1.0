@@ -392,9 +392,9 @@ First things first! After your web page is loaded and rendered, the Mochi instan
 
 > ## $m.extend()
 >
-> _Mochi_ **$m.extend(** _string_ **namespace**, _[Function&period;name](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)_ **instance** [, _function_ **callback**] **)**
+> _Mochi_ **$m.extend(** _string_ **namespace**, _[Function&period;name](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)_ **instance** [, _object_ **meta**][, _function_ **callback**] **)**
 >
-> Extends `$m` ([persistent Mochi instance](#persistent-mochi-instance)) by creating a new [instance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new) of a user-defined function (i.e., an object type that has a constructor function), and storing that instance as an [object key](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) referenced by `namespace` under `$m` (e.g., `$m.somethingcool`). The optional `callback` function is executed immediately after, with `this` assigned as a reference of `instance` in `namespace`. `callback` receives no arguments.
+> Extends `$m` ([persistent Mochi instance](https://github.com/codeworksdev/mochi#persistent-mochi-instance)) by creating a new [instance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new) of a user-defined function (i.e., an object type that has a constructor function), and storing that instance as an [object key](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) referenced by `namespace` under `$m` (e.g., `$m.somethingcool`). The optional `callback` function is executed immediately after, with `this` assigned as a reference of `instance` in `namespace`. Additionally, you can pass a `meta` [object](https://github.com/codeworksdev/mochi#missimpleobj) as the first parameter to the `instance` and `callback` functions. If no `meta` is provided, assumes an empty object.
 >
 >  _**Note:** This method is especially useful for [plugin development](#plugins)._
 
