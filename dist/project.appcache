@@ -14,7 +14,6 @@ bootstrap/css/bootstrap-reboot.min.css
 frontend/css/print.css
 frontend/css/style.css
 mochi/css/helpers/animate.less/dist/css/animate.css
-mochi/js/helpers/font-awesome/svg-with-js/css/fa-svg-with-js.css
 mochi/js/helpers/ViewerJS/example.local.css
 mochi/js/helpers/ViewerJS/ODFViewerPlugin.css
 mochi/js/helpers/ViewerJS/PDFViewerPlugin.css
