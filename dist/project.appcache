@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v1.0 2018-07-11
+# v1.0 2018-07-31
 
 # HTML files should not be included here
 CACHE:
@@ -34,7 +34,7 @@ bootstrap/js/bootstrap.min.js
 frontend/js/onload.js
 mochi/js/helpers/basil.min.js
 mochi/js/helpers/Chart.bundle.min.js
-mochi/js/helpers/font-awesome-free/js/all.js
+mochi/js/helpers/font-awesome-free/js/all.min.js
 mochi/js/helpers/holder.min.js
 mochi/js/helpers/iScroll/build/iscroll.js
 mochi/js/helpers/iScroll/build/iscroll.min.js
