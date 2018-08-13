@@ -153,6 +153,7 @@ dist/
 │   │   │   │
 │   │   │   ├── basil.min.js
 │   │   │   ├── Chart.bundle.min.js
+│   │   │   ├── clipboard.min.js
 │   │   │   ├── holder.min.js
 │   │   │   ├── modernizr-custom.js
 │   │   │   ├── popper.min.js
