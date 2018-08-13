@@ -1,7 +1,7 @@
 # Mochi
 _Front-end framework for developing responsive, mobile first projects on the web or offline._
 
-> [**v1.5.3**](https://github.com/codeworksdev/mochi/releases/latest)
+> [**v1.5.4**](https://github.com/codeworksdev/mochi/releases/latest)
 
 Mochi is a ready-to-deploy HTML5 boilerplate framework that runs on [Bootstrap](http://getbootstrap.com/), but adds tons of new features, with a strong focus on offline web applications without all the limitations. It achieves this goal by fully integrating and maintaining offline versions of popular libraries that have been out in the wild for years.
 
@@ -52,6 +52,7 @@ dist/
 │       ├── _2dppx_425up.less
 │       ├── _2dppx_480up.less
 │       ├── _2dppx_576up.less
+│       ├── _2dppx_640up.less
 │       ├── _2dppx_750up.less
 │       ├── _2dppx_768up.less
 │       ├── _2dppx_970up.less
@@ -68,6 +69,7 @@ dist/
 │       ├── _425up.less
 │       ├── _480up.less
 │       ├── _576up.less
+│       ├── _640up.less
 │       ├── _750up.less
 │       ├── _768up.less
 │       ├── _970up.less
@@ -201,6 +203,7 @@ dist/
 │       ├── _2dppx_425up.less
 │       ├── _2dppx_480up.less
 │       ├── _2dppx_576up.less
+│       ├── _2dppx_640up.less
 │       ├── _2dppx_750up.less
 │       ├── _2dppx_768up.less
 │       ├── _2dppx_970up.less
@@ -217,6 +220,7 @@ dist/
 │       ├── _425up.less
 │       ├── _480up.less
 │       ├── _576up.less
+│       ├── _640up.less
 │       ├── _750up.less
 │       ├── _768up.less
 │       ├── _970up.less
@@ -253,6 +257,7 @@ One of the major advantages of using Mochi is that it comes packed with many use
 | Basil.js | 0.4.10 | https://wisembly.github.io/basil.js/ |
 | Bootstrap | 4.1.3 | https://getbootstrap.com/ |
 | Chart.js | 2.7.2 | https://www.chartjs.org/ |
+| Clipboard.js | 2.0 | https://clipboardjs.com/ |
 | Font Awesome | 5.2 | https://fontawesome.com/ |
 | Holder.js | 2.9.4 | http://holderjs.com/ |
 | iScroll | 5.2 | http://iscrolljs.com/ |
