@@ -257,9 +257,9 @@ One of the major advantages of using Mochi is that it comes packed with many use
 | Animate.less | 2.0 | http://animateforless.com/ |
 | Basil.js | 0.4.10 | https://wisembly.github.io/basil.js/ |
 | Bootstrap | 4.1.3 | https://getbootstrap.com/ |
-| Chart.js | 2.7.2 | https://www.chartjs.org/ |
+| Chart.js | 2.7.3 | https://www.chartjs.org/ |
 | Clipboard.js | 2.0.1 | https://clipboardjs.com/ |
-| Font Awesome | 5.3.1 | https://fontawesome.com/ |
+| Font Awesome | 5.4.1 | https://fontawesome.com/ |
 | Holder.js | 2.9.4 | http://holderjs.com/ |
 | iScroll | 5.2 | http://iscrolljs.com/ |
 | jQuery | 3.3.1 | http://jquery.com/ |
@@ -268,7 +268,7 @@ One of the major advantages of using Mochi is that it comes packed with many use
 | Popper.js | 1.14.4 | https://popper.js.org/ |
 | sprintf-js | 1.1.1 | https://www.npmjs.com/package/sprintf-js |
 | Underscore.js | 1.9.1 | http://underscorejs.org/ |
-| Underscore.string | 3.3.4 | http://gabceb.github.io/underscore.string.site/ |
+| Underscore.string | 3.3.5 | http://gabceb.github.io/underscore.string.site/ |
 | ViewerJS | 0.5.9 | http://viewerjs.org/ |
 
 ___
