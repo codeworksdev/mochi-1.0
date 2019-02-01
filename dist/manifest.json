@@ -4,8 +4,8 @@
     "start_url"        : "index.html",
     "display"          : "standalone",
     "orientation"      : "portrait",
-    "theme_color"      : "#F3F3F3",
-    "background_color" : "#F3F3F3",
+    "theme_color"      : "#f3f3f3",
+    "background_color" : "#f3f3f3",
     "icons" : [
         {
             "src"   : "frontend/img/brand/launcher-icon-1x.png",

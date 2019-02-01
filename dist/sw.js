@@ -2,7 +2,7 @@
 {
     var CACHE = {
         VERSION : 1.0,
-        DATE : '2018-08-30',
+        DATE : '2019-02-01',
         NAME : 'mochi-sw-cache-master',
         LIST : [
             './',
@@ -38,6 +38,7 @@
             'mochi/js/helpers/iScroll/build/iscroll-probe.min.js',
             'mochi/js/helpers/iScroll/build/iscroll-zoom.js',
             'mochi/js/helpers/iScroll/build/iscroll-zoom.min.js',
+            'mochi/js/helpers/jquery.canvasjs.min.js',
             'mochi/js/helpers/modernizr-custom.js',
             'mochi/js/helpers/popper.min.js',
             'mochi/js/helpers/sprintf.min.js',
