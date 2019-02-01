@@ -63,6 +63,7 @@ dist/
 │       ├── _2dppx_1200up.less
 │       ├── _2dppx_1440up.less
 │       ├── _2dppx_1560up.less
+│       ├── _2dppx_1920up.less
 │       ├── _2dppx_2560up.less
 │       ├── _2dppx_base.less
 │       ├── _375up.less
@@ -80,6 +81,7 @@ dist/
 │       ├── _1200up.less
 │       ├── _1440up.less
 │       ├── _1560up.less
+│       ├── _1920up.less
 │       ├── _2560up.less
 │       ├── _base.less
 │       ├── _mixins.less
@@ -216,6 +218,7 @@ dist/
 │       ├── _2dppx_1200up.less
 │       ├── _2dppx_1440up.less
 │       ├── _2dppx_1560up.less
+│       ├── _2dppx_1920up.less
 │       ├── _2dppx_2560up.less
 │       ├── _2dppx_base.less
 │       ├── _375up.less
@@ -233,6 +236,7 @@ dist/
 │       ├── _1200up.less
 │       ├── _1440up.less
 │       ├── _1560up.less
+│       ├── _1920up.less
 │       ├── _2560up.less
 │       ├── _base.less
 │       ├── _mixins.less
