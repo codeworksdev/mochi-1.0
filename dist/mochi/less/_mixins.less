@@ -64,6 +64,26 @@
     @style      : inherit;
     @decoration : inherit;
     @lh         : inherit
+    ) when not (iskeyword(@cond)), (isstring(@cond)), (iscolor(@cond)), (isnumber(@cond)) {
+    font-family: @cond;
+    font-size: @size;
+    color: @color;
+    font-weight: @weight;
+    text-transform: @transform;
+    font-style: @style;
+    text-decoration: @decoration;
+    line-height: @lh;
+    }
+
+.font(
+    @cond       : inherit;
+    @size       : inherit;
+    @color      : inherit;
+    @weight     : inherit;
+    @transform  : inherit;
+    @style      : inherit;
+    @decoration : inherit;
+    @lh         : inherit
     ) when (iskeyword(@cond)), (isstring(@cond)) {
     font-family: @cond;
     font-size: @size;

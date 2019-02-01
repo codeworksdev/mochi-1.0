@@ -1,7 +1,7 @@
 # Mochi
 _Front-end framework for developing responsive, mobile first projects on the web or offline._
 
-> [**v1.5.5**](https://github.com/codeworksdev/mochi/releases/latest)
+> [**v1.6**](https://github.com/codeworksdev/mochi/releases/latest)
 
 Mochi is a ready-to-deploy HTML5 boilerplate framework that runs on [Bootstrap](http://getbootstrap.com/), but adds tons of new features, with a strong focus on offline web applications without all the limitations. It achieves this goal by fully integrating and maintaining offline versions of popular libraries that have been out in the wild for years.
 
@@ -63,6 +63,7 @@ dist/
 │       ├── _2dppx_1200up.less
 │       ├── _2dppx_1440up.less
 │       ├── _2dppx_1560up.less
+│       ├── _2dppx_1920up.less
 │       ├── _2dppx_2560up.less
 │       ├── _2dppx_base.less
 │       ├── _375up.less
@@ -80,6 +81,7 @@ dist/
 │       ├── _1200up.less
 │       ├── _1440up.less
 │       ├── _1560up.less
+│       ├── _1920up.less
 │       ├── _2560up.less
 │       ├── _base.less
 │       ├── _mixins.less
@@ -155,11 +157,12 @@ dist/
 │   │   │   ├── Chart.bundle.min.js
 │   │   │   ├── clipboard.min.js
 │   │   │   ├── holder.min.js
+│   │   │   ├── jquery.canvasjs.min.js
 │   │   │   ├── modernizr-custom.js
 │   │   │   ├── popper.min.js
 │   │   │   ├── sprintf.min.js
-│   │   │   ├── underscore.string.min.js
 │   │   │   └── underscore-min.js
+│   │   │   ├── underscore.string.min.js
 │   │   │
 │   │   ├── jquery/
 │   │   │   ├── ui/
@@ -215,6 +218,7 @@ dist/
 │       ├── _2dppx_1200up.less
 │       ├── _2dppx_1440up.less
 │       ├── _2dppx_1560up.less
+│       ├── _2dppx_1920up.less
 │       ├── _2dppx_2560up.less
 │       ├── _2dppx_base.less
 │       ├── _375up.less
@@ -232,6 +236,7 @@ dist/
 │       ├── _1200up.less
 │       ├── _1440up.less
 │       ├── _1560up.less
+│       ├── _1920up.less
 │       ├── _2560up.less
 │       ├── _base.less
 │       ├── _mixins.less
@@ -252,24 +257,25 @@ ___
 
 One of the major advantages of using Mochi is that it comes packed with many useful 3rd-party libraries to help you develop your application rapidly, and with less effort than would be necessary with just the standard Bootstrap distribution. The following 3rd-party libraries are included with our [standard distribution package](https://github.com/codeworksdev/mochi/releases/latest):
 
-| Library | Version | Developer Website |
-|--|--|--|
-| Animate.less | 2.0 | http://animateforless.com/ |
-| Basil.js | 0.4.10 | https://wisembly.github.io/basil.js/ |
-| Bootstrap | 4.1.3 | https://getbootstrap.com/ |
-| Chart.js | 2.7.2 | https://www.chartjs.org/ |
-| Clipboard.js | 2.0.1 | https://clipboardjs.com/ |
-| Font Awesome | 5.3.1 | https://fontawesome.com/ |
-| Holder.js | 2.9.4 | http://holderjs.com/ |
-| iScroll | 5.2 | http://iscrolljs.com/ |
-| jQuery | 3.3.1 | http://jquery.com/ |
-| jQuery UI | 1.12.1 | https://jqueryui.com/ |
-| Modernizr | 3.5 | https://modernizr.com/ |
-| Popper.js | 1.14.4 | https://popper.js.org/ |
-| sprintf-js | 1.1.1 | https://www.npmjs.com/package/sprintf-js |
-| Underscore.js | 1.9.1 | http://underscorejs.org/ |
-| Underscore.string | 3.3.4 | http://gabceb.github.io/underscore.string.site/ |
-| ViewerJS | 0.5.9 | http://viewerjs.org/ |
+| Library           | Version | Developer Website                               |
+|-------------------|---------|-------------------------------------------------|
+| Animate.less      | 2.0     | http://animateforless.com/                      |
+| Basil.js          | 0.4.10  | https://wisembly.github.io/basil.js/            |
+| Bootstrap         | 4.2.1   | https://getbootstrap.com/                       |
+| CanvasJS          | 2.3     | https://canvasjs.com/                           |
+| Chart.js          | 2.7.3   | https://www.chartjs.org/                        |
+| Clipboard.js      | 2.0.4   | https://clipboardjs.com/                        |
+| Font Awesome      | 5.7     | https://fontawesome.com/                        |
+| Holder.js         | 2.9.4   | http://holderjs.com/                            |
+| iScroll           | 5.2     | http://iscrolljs.com/                           |
+| jQuery            | 3.3.1   | http://jquery.com/                              |
+| jQuery UI         | 1.12.1  | https://jqueryui.com/                           |
+| Modernizr         | 3.6     | https://modernizr.com/                          |
+| Popper.js         | 1.14.7  | https://popper.js.org/                          |
+| sprintf-js        | 1.1.2   | https://www.npmjs.com/package/sprintf-js        |
+| Underscore.js     | 1.9.1   | http://underscorejs.org/                        |
+| Underscore.string | 3.3.5   | http://gabceb.github.io/underscore.string.site/ |
+| ViewerJS          | 0.5.9   | http://viewerjs.org/                            |
 
 ___
 # Less.js CSS Preprocessor Support
@@ -284,36 +290,37 @@ Less.js runs inside [Node](https://nodejs.org/), in the browser and inside [Rhin
 ## Predefined Media Queries
 Predefined [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) are defined in the folder **`dist/frontend/less`**. Each media query is assigned a dedicated Less import file for better organization, and of course, they're all completely optional. As a bonus, we've also included [retina display (192dpi) media queries](https://css-tricks.com/snippets/css/retina-display-media-query/) to compliment the standard (96dpi) media queries.
 
-| 96dpi (1dppx), 192dpi (2dppx) | Typical Device | File (96dpi) | File (192dpi)
-|--|--|--|--|
-| < 375px (base) | Phone (legacy)           | `_base.less`   | `_2dppx_base.less`
-| >= 375px  | Phone (legacy)                | `_375up.less`  | `_2dppx_375up.less`
-| >= 425px  | Phone (large)                 | `_425up.less`  | `_2dppx_425up.less`
-| >= 480px  | Phone (large), Tablet (small) | `_480up.less`  | `_2dppx_480up.less`
-| >= 576px  | Phone (large), Tablet (small) | `_576up.less`  | `_2dppx_576up.less`
-| >= 750px  | Tablet (small)                | `_750up.less`  | `_2dppx_750up.less`
-| >= 768px  | Tablet (small)                | `_768up.less`  | `_2dppx_768up.less`
-| >= 970px  | Tablet (medium)               | `_970up.less`  | `_2dppx_970up.less`
-| >= 992px  | Tablet (medium)               | `_992up.less`  | `_2dppx_992up.less`
-| >= 1020px | Tablet (large)                | `_1020up.less` | `_2dppx_1020up.less`
-| >= 1024px | Tablet (large)                | `_1024up.less` | `_2dppx_1024up.less`
-| >= 1170px | Desktop/Laptop/Tablet         | `_1170up.less` | `_2dppx_1170up.less`
-| >= 1200px | Desktop/Laptop/Tablet         | `_1200up.less` | `_2dppx_1200up.less`
-| >= 1440px | Desktop                       | `_1440up.less` | `_2dppx_1440up.less`
-| >= 1560px | Desktop (HD)                  | `_1560up.less` | `_2dppx_1560up.less`
-| >= 2560px | Desktop (2K)                  | `_2560up.less` | `_2dppx_2560up.less`
+| 96dpi (1dppx), 192dpi (2dppx) | Typical Device                | File (96dpi)   | File (192dpi)        |
+|-------------------------------|-------------------------------|----------------|----------------------|
+| < 375px (base)                | Phone (legacy)                | `_base.less`   | `_2dppx_base.less`   |
+| >= 375px                      | Phone (legacy)                | `_375up.less`  | `_2dppx_375up.less`  |
+| >= 425px                      | Phone (large)                 | `_425up.less`  | `_2dppx_425up.less`  |
+| >= 480px                      | Phone (large), Tablet (small) | `_480up.less`  | `_2dppx_480up.less`  |
+| >= 576px                      | Phone (large), Tablet (small) | `_576up.less`  | `_2dppx_576up.less`  |
+| >= 750px                      | Tablet (small)                | `_750up.less`  | `_2dppx_750up.less`  |
+| >= 768px                      | Tablet (small)                | `_768up.less`  | `_2dppx_768up.less`  |
+| >= 970px                      | Tablet (medium)               | `_970up.less`  | `_2dppx_970up.less`  |
+| >= 992px                      | Tablet (medium)               | `_992up.less`  | `_2dppx_992up.less`  |
+| >= 1020px                     | Tablet (large)                | `_1020up.less` | `_2dppx_1020up.less` |
+| >= 1024px                     | Tablet (large)                | `_1024up.less` | `_2dppx_1024up.less` |
+| >= 1170px                     | Desktop/Laptop/Tablet         | `_1170up.less` | `_2dppx_1170up.less` |
+| >= 1200px                     | Desktop/Laptop/Tablet         | `_1200up.less` | `_2dppx_1200up.less` |
+| >= 1440px                     | Desktop/Laptop (HD)           | `_1440up.less` | `_2dppx_1440up.less` |
+| >= 1560px                     | Desktop (HD)                  | `_1560up.less` | `_2dppx_1560up.less` |
+| >= 1920px                     | Desktop (HD)                  | `_1920up.less` | `_2dppx_1920up.less` |
+| >= 2560px                     | Desktop (2K)                  | `_2560up.less` | `_2dppx_2560up.less` |
 
 ## Special Less Imports
 In addition to the media breakpoints listed above, the following import files are also included:
 
-| File | Description |
-|--|--|
-| `_base.less`     | Defines base styles for all media queries (i.e., all devices).
-| `_print.less`    | Used for printed media. Imports Bootstrap CSS.
-| `_notouch.less`  | Used for non-touch enabled devices (e.g., desktops).
-| `_mixins.less`   | Define your own global Less mixins, variables, and styles.
-| **`print.less`** | Generates CSS file for [printed media](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Targeting_media_types).
-| **`style.less`** | Generates CSS file for all media types other than [print](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Targeting_media_types).
+| File             | Description                                                                                                                                                          |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `_base.less`     | Defines base styles for all media queries (i.e., all devices).                                                                                                       |
+| `_print.less`    | Used for printed media. Imports Bootstrap CSS.                                                                                                                       |
+| `_notouch.less`  | Used for non-touch enabled devices (e.g., desktops).                                                                                                                 |
+| `_mixins.less`   | Define your own global Less mixins, variables, and styles.                                                                                                           |
+| **`print.less`** | Generates CSS file for [printed media](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Targeting_media_types).                    |
+| **`style.less`** | Generates CSS file for all media types other than [print](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Targeting_media_types). |
 
 _**Note:** When importing the folder **`dist/frontend/less`** into your Less.js compiler please make sure only the **`print.less`** and **`style.less`** files are compiled to CSS, and not the files prefixed with an underscore._
 
@@ -346,33 +353,33 @@ Mochi includes a simple JavaScript starter template (in [**`dist/frontend/js/onl
 ## Persistent Mochi Instance
 First things first! After your web page is loaded and rendered, the Mochi instance will register itself as a regular JavaScript global variable called **`$m`**. This variable is defined within the [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) scope, making it accessible by your entire application. The persistent Mochi instance contains the following components:
 
-| [Methods](#methods) | [Hooks](#hooks) | [Options](#options) | [Properties](#properties)
-|--|--|--|--|
-| [do](#mdo) | [mochi_before](#mochi_before) | [CLICK_NAME](#click_name) | __body
-| [extend](#mextend) | [mochi_init](#mochi_init) | [DEBUG_MODE](#debug_mode) | __container
-| [getDefaultOption](#mgetdefaultoption) | [mochi_load](#mochi_load) | [ENABLE_SERVICE_WORKER](#enable_service_worker) | __content
-| [getOnClickName](#mgetonclickname) | [mochi_load_page](#mochi_load_page) | [LAZY_LOAD_PLUGINS](#lazy_load_plugins) | __head
-| [getOption](#mgetoption) | [mochi_load_page{N}](#mochi_load_pagen) | [SW_UPDATE_NOTIFICATIONS](#sw_update_notifications) | __href
-| [getPage](#mgetpage) | [mochi_load_view](#mochi_load_view) | [SW_UPDATE_NOTIFICATIONS_OPTIONS](#sw_update_notifications_options) | __html
-| [getState](#mgetstate) | [mochi_load_view{N}](#mochi_load_viewn) | [SW_VERBOSE_SYNCING](#sw_verbose_syncing) | __observer
-| [getView](#mgetview) | [mochi_unload](#mochi_unload) | [SW_VERBOSE_SYNCING_OPTIONS](#sw_verbose_syncing_options) | __page_name
-| [isSimpleObj](#missimpleobj) | [mochi_unload_page](#mochi_unload_page) | |
-| [load](#mload) | [mochi_unload_page{N}](#mochi_unload_pagen) | |
-| [loadPage](#mloadpage) | [mochi_unload_page](#mochi_unload) | |
-| [loadView](#mloadview) | [mochi_unload_page{N}](#mochi_unload_pagen) | |
-| [log](#mlog) | [mochi_unload_view](#mochi_unload_view) | |
-| [onClick](#monclick) | [mochi_unload_view{N}](#mochi_unload_viewn) | |
-| [sanitizeTitle](#msanitizetitle) | [mochi_last](#mochi_last) | |
-| [setOnClickName](#msetonclickname) | [mochi_onchange](#mochi_onchange) | |
-| [setOption](#msetoption) | [mochi_onmutation](#mochi_onmutation) | |
-| [setPage](#msetpage) | | |
-| [setState](#msetstate) | | |
-| [setView](#msetview) | | |
-| [unload](#munload) | | |
-| [unloadPage](#munloadpage) | | |
-| [unloadView](#munloadview) | | |
-| [widgetOnDownloading](#mwidgetondownloading) | | |
-| [widgetOnUpdateReady](#mwidgetonupdateready) | | |
+| [Methods](#methods)                          | [Hooks](#hooks)                             | [Options](#options)                                                 | [Properties](#properties) |
+|----------------------------------------------|---------------------------------------------|---------------------------------------------------------------------|---------------------------|
+| [do](#mdo)                                   | [mochi_before](#mochi_before)               | [CLICK_NAME](#click_name)                                           | __body                    |
+| [extend](#mextend)                           | [mochi_init](#mochi_init)                   | [DEBUG_MODE](#debug_mode)                                           | __container               |
+| [getDefaultOption](#mgetdefaultoption)       | [mochi_load](#mochi_load)                   | [ENABLE_SERVICE_WORKER](#enable_service_worker)                     | __content                 |
+| [getOnClickName](#mgetonclickname)           | [mochi_load_page](#mochi_load_page)         | [LAZY_LOAD_PLUGINS](#lazy_load_plugins)                             | __head                    |
+| [getOption](#mgetoption)                     | [mochi_load_page{N}](#mochi_load_pagen)     | [SW_UPDATE_NOTIFICATIONS](#sw_update_notifications)                 | __href                    |
+| [getPage](#mgetpage)                         | [mochi_load_view](#mochi_load_view)         | [SW_UPDATE_NOTIFICATIONS_OPTIONS](#sw_update_notifications_options) | __html                    |
+| [getState](#mgetstate)                       | [mochi_load_view{N}](#mochi_load_viewn)     | [SW_VERBOSE_SYNCING](#sw_verbose_syncing)                           | __observer                |
+| [getView](#mgetview)                         | [mochi_unload](#mochi_unload)               | [SW_VERBOSE_SYNCING_OPTIONS](#sw_verbose_syncing_options)           | __page_name               |
+| [isSimpleObj](#missimpleobj)                 | [mochi_unload_page](#mochi_unload_page)     |                                                                     |                           |
+| [load](#mload)                               | [mochi_unload_page{N}](#mochi_unload_pagen) |                                                                     |                           |
+| [loadPage](#mloadpage)                       | [mochi_unload_page](#mochi_unload)          |                                                                     |                           |
+| [loadView](#mloadview)                       | [mochi_unload_page{N}](#mochi_unload_pagen) |                                                                     |                           |
+| [log](#mlog)                                 | [mochi_unload_view](#mochi_unload_view)     |                                                                     |                           |
+| [onClick](#monclick)                         | [mochi_unload_view{N}](#mochi_unload_viewn) |                                                                     |                           |
+| [sanitizeTitle](#msanitizetitle)             | [mochi_last](#mochi_last)                   |                                                                     |                           |
+| [setOnClickName](#msetonclickname)           | [mochi_onchange](#mochi_onchange)           |                                                                     |                           |
+| [setOption](#msetoption)                     | [mochi_onmutation](#mochi_onmutation)       |                                                                     |                           |
+| [setPage](#msetpage)                         |                                             |                                                                     |                           |
+| [setState](#msetstate)                       |                                             |                                                                     |                           |
+| [setView](#msetview)                         |                                             |                                                                     |                           |
+| [unload](#munload)                           |                                             |                                                                     |                           |
+| [unloadPage](#munloadpage)                   |                                             |                                                                     |                           |
+| [unloadView](#munloadview)                   |                                             |                                                                     |                           |
+| [widgetOnDownloading](#mwidgetondownloading) |                                             |                                                                     |                           |
+| [widgetOnUpdateReady](#mwidgetonupdateready) |                                             |                                                                     |                           |
 
 
 ## Methods
@@ -455,12 +462,12 @@ First things first! After your web page is loaded and rendered, the Mochi instan
 >
 > **DEFAULT META OBJECT**
 >
-> | property | type | description |
-> |--|--|--|
-> | caller | string | Name of function or constructor that called this method (e.g., "[loadPage](#mloadpage)"). |
-> | newStateNumber | number | New state number, if provided. Otherwise, uses current/unchanged state number. |
-> | oldStateNumber | number | Previous state number, if provided. Otherwise, uses unchanged state number. |
-> | stateName | string | The state name in this call (either `"page"` or `"view"`). |
+> | property       | type   | description                                                                               |
+> |----------------|--------|-------------------------------------------------------------------------------------------|
+> | caller         | string | Name of function or constructor that called this method (e.g., "[loadPage](#mloadpage)"). |
+> | newStateNumber | number | New state number, if provided. Otherwise, uses current/unchanged state number.            |
+> | oldStateNumber | number | Previous state number, if provided. Otherwise, uses unchanged state number.               |
+> | stateName      | string | The state name in this call (either `"page"` or `"view"`).                                |
 
 > ## $m.loadPage()
 >
@@ -683,16 +690,16 @@ _**Note:** Hook are completely optional within your project and, if defined, are
 ## Options
 Several options (or flags) are supported to allow you to take full advantage of all the features available in our [standard distribution package](https://github.com/codeworksdev/mochi/releases/latest). All supported options are listed in the table below.
 
-| Option | Type | Default |
-|--|--|--|
-| [`CLICK_NAME`](#click_name) | `string` | `auto` |
-| [`DEBUG_MODE`](#debug_mode) | `bool` | `false` |
-| [`ENABLE_SERVICE_WORKER`](#enable_service_worker) | `bool` | `false` |
-| [`LAZY_LOAD_PLUGINS`](#lazy_load_plugins) | `array` | `[]` |
-| [`SW_UPDATE_NOTIFICATIONS`](#sw_update_notifications) | `bool` | `true` |
+| Option                                                                | Type     | Default                                                      |
+|-----------------------------------------------------------------------|----------|--------------------------------------------------------------|
+| [`CLICK_NAME`](#click_name)                                           | `string` | `auto`                                                       |
+| [`DEBUG_MODE`](#debug_mode)                                           | `bool`   | `false`                                                      |
+| [`ENABLE_SERVICE_WORKER`](#enable_service_worker)                     | `bool`   | `false`                                                      |
+| [`LAZY_LOAD_PLUGINS`](#lazy_load_plugins)                             | `array`  | `[]`                                                         |
+| [`SW_UPDATE_NOTIFICATIONS`](#sw_update_notifications)                 | `bool`   | `true`                                                       |
 | [`SW_UPDATE_NOTIFICATIONS_OPTIONS`](#sw_update_notifications_options) | `object` | [`object`](https://github.com/codeworksdev/mochi/issues/195) |
-| [`SW_VERBOSE_SYNCING`](#sw_verbose_syncing) | `bool` | `true` |
-| [`SW_VERBOSE_SYNCING_OPTIONS`](#sw_verbose_syncing_options) | `object` | [`object`](https://github.com/codeworksdev/mochi/issues/196) |
+| [`SW_VERBOSE_SYNCING`](#sw_verbose_syncing)                           | `bool`   | `true`                                                       |
+| [`SW_VERBOSE_SYNCING_OPTIONS`](#sw_verbose_syncing_options)           | `object` | [`object`](https://github.com/codeworksdev/mochi/issues/196) |
 
 > ## CLICK_NAME
 >
@@ -737,16 +744,16 @@ Several options (or flags) are supported to allow you to take full advantage of 
 ## Properties
 The following properties are available in the persistent Mochi instance (`$m`):
 
-| Property | Type | Description |
-|--|--|--|
-| `__body` | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/) | HTML `<body>` element. |
-| `__container` | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/) | HTML `#container` element, if defined. |
-| `__content` | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/) | HTML `#content` element, if defined. |
-| `__head` | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/) | HTML `<head>` element. |
-| `__href` | `string` | Current window URL/address. |
-| `__html` | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/) | HTML `<html>` element. |
-| `__observer` | [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) | [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) interface. |
-| `__page_name` | `string` | Current HTML document name (without extension). |
+| Property      | Type                                                                                    | Description                                                                                        |
+|---------------|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| `__body`      | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/)                   | HTML `<body>` element.                                                                             |
+| `__container` | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/)                   | HTML `#container` element, if defined.                                                             |
+| `__content`   | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/)                   | HTML `#content` element, if defined.                                                               |
+| `__head`      | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/)                   | HTML `<head>` element.                                                                             |
+| `__href`      | `string`                                                                                | Current window URL/address.                                                                        |
+| `__html`      | [`jQuery`](https://learn.jquery.com/using-jquery-core/jquery-object/)                   | HTML `<html>` element.                                                                             |
+| `__observer`  | [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) | [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) interface. |
+| `__page_name` | `string`                                                                                | Current HTML document name (without extension).                                                    |
 
 ___
 # Extending Mochi
@@ -754,10 +761,10 @@ ___
 ## Plugins
 Mochi comes preloaded with specialized, but optional, plugins (or scripts) that further enhance the capabilities of your app. Currently, there are two official plugins available for use right out of the box. More plugins will be added in future releases, but in the meantime, we recommend you review each plugin listed below to get familiar with how to write your own. Happy coding!
 
-| Plugin | Description | Links
-|--|--|--|
-| Dialog | Enhanced dialog system powered by [jQuery UI](https://jqueryui.com/). | [Documentation](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/js/plugins/dialog/README.md)
-| Veeva CLM Application | Adds [Veeva CLM](https://www.veeva.com/products/multichannel-crm/clm/) compatibility to Mochi. | [Documentation](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/js/plugins/veeva/README.md)
+| Plugin                | Description                                                                                    | Links                                                                                                     |
+|-----------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| Dialog                | Enhanced dialog system powered by [jQuery UI](https://jqueryui.com/).                          | [Documentation](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/js/plugins/dialog/README.md) |
+| Veeva CLM Application | Adds [Veeva CLM](https://www.veeva.com/products/multichannel-crm/clm/) compatibility to Mochi. | [Documentation](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/js/plugins/veeva/README.md)  |
 ___
 # Further Reading
 Because Mochi is built with Bootstrap, learning to use it is as easy as digging into their official docs and mastering the awesome features provided by the framework. We encourage you to head on over to the [official Bootstrap documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/) to learn like a pro. Happy coding!

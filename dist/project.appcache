@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v1.0 2018-08-30
+# v1.0 2019-02-01
 
 # HTML files should not be included here
 CACHE:
@@ -47,6 +47,7 @@ mochi/js/helpers/iScroll/build/iscroll-probe.js
 mochi/js/helpers/iScroll/build/iscroll-probe.min.js
 mochi/js/helpers/iScroll/build/iscroll-zoom.js
 mochi/js/helpers/iScroll/build/iscroll-zoom.min.js
+mochi/js/helpers/jquery.canvasjs.min.js
 mochi/js/helpers/modernizr-custom.js
 mochi/js/helpers/popper.min.js
 mochi/js/helpers/sprintf.min.js
