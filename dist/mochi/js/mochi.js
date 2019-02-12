@@ -1,6 +1,6 @@
 /*!
- * Mochi v1.6 (https://github.com/codeworksdev/mochi)
- * Copyright (c) 2014-2018 CODEWORKS <support@codeworksnyc.com>
+ * Mochi v1.6.1 (https://github.com/codeworksdev/mochi)
+ * Copyright (c) 2014-2019 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
 $(document).ready(

@@ -2,7 +2,7 @@
 {
     var CACHE = {
         VERSION : 1.0,
-        DATE : '2019-02-01',
+        DATE : '2019-02-12',
         NAME : 'mochi-sw-cache-master',
         LIST : [
             './',
