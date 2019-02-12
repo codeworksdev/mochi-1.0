@@ -261,13 +261,13 @@ One of the major advantages of using Mochi is that it comes packed with many use
 |-------------------|---------|-------------------------------------------------|
 | Animate.less      | 2.0     | http://animateforless.com/                      |
 | Basil.js          | 0.4.10  | https://wisembly.github.io/basil.js/            |
-| Bootstrap         | 4.2.1   | https://getbootstrap.com/                       |
-| CanvasJS          | 2.3     | https://canvasjs.com/                           |
+| Bootstrap         | 4.3     | https://getbootstrap.com/                       |
+| CanvasJS          | 2.3.1   | https://canvasjs.com/                           |
 | Chart.js          | 2.7.3   | https://www.chartjs.org/                        |
 | Clipboard.js      | 2.0.4   | https://clipboardjs.com/                        |
-| Font Awesome      | 5.7     | https://fontawesome.com/                        |
-| Holder.js         | 2.9.4   | http://holderjs.com/                            |
-| iScroll           | 5.2     | http://iscrolljs.com/                           |
+| Font Awesome      | 5.7.1   | https://fontawesome.com/                        |
+| Holder.js         | 2.9.6   | http://holderjs.com/                            |
+| iScroll           | 5.2     | https://github.com/cubiq/iscroll                |
 | jQuery            | 3.3.1   | http://jquery.com/                              |
 | jQuery UI         | 1.12.1  | https://jqueryui.com/                           |
 | Modernizr         | 3.6     | https://modernizr.com/                          |
