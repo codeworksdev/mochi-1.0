@@ -144,6 +144,7 @@ bool   | CLM_FORCE_VEEVA_NAVIGATION | false
 > By default, the navigation controls created by `options.CLM_NAVIGATION` are not themed with any CSS or icons (i.e., this option is set to false). This allows you to easily theme the controls yourself. Enabling this option assigns a basic SVG icon to each control.
 
 > **CLM_FORCE_VEEVA_NAVIGATION**
+
 > Enabling this option tells the navigation functions to not attempt to auto-detect the platform in use (e.g., Veeva, Windows, web browser, etc.). This is helpful in situtations where the intended target platfom is not fully supported by this plugin. Otherwise, it's recommended to keep this option disabled.
 
 ___
