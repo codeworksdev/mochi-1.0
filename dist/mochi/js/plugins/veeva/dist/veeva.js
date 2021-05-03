@@ -1,5 +1,5 @@
 /*!
- * Mochi Plugin - Veeva CLM Application v1.0 (https://github.com/codeworksdev/mochi/tree/master/dist/frontend/js/plugins/veeva)
+ * Mochi Plugin - Veeva CLM Application v1.1 (https://github.com/codeworksdev/mochi/tree/master/dist/frontend/js/plugins/veeva)
  * Copyright (c) 2014-2019 CODEWORKS <support@codeworksnyc.com>
  * Licensed under the MIT license
  */
@@ -29,16 +29,17 @@ MochiPlugin__Veeva.prototype =
 {
     _options : function()
     {
-        var o                        = {};
-            o.CLM_VERSION            = '1.0';
-            o.CLM_NAME               = $('html title').text();
-            o.CLM_ID                 = o.CLM_NAME.replace(/\W/g,'_').toUpperCase()+'_'+o.CLM_VERSION.replace(/\W/g,'_');
-            o.CLM_SLIDE_PREFIX       = o.CLM_ID.toLowerCase()+'_slide';
-            o.CLM_NUMBER_PAD         = 2
-            o.CLM_FIRST_SLIDE_NUMBER = 0;
-            o.CLM_LAST_SLIDE_NUMBER  = 0;
-            o.CLM_NAVIGATION         = false;
-            o.CLM_NAVIGATION_THEME   = false;
+        var o                            = {};
+            o.CLM_VERSION                = '1.0';
+            o.CLM_NAME                   = $('html title').text();
+            o.CLM_ID                     = o.CLM_NAME.replace(/\W/g,'_').toUpperCase()+'_'+o.CLM_VERSION.replace(/\W/g,'_');
+            o.CLM_SLIDE_PREFIX           = o.CLM_ID.toLowerCase()+'_slide';
+            o.CLM_NUMBER_PAD             = 2
+            o.CLM_FIRST_SLIDE_NUMBER     = 0;
+            o.CLM_LAST_SLIDE_NUMBER      = 0;
+            o.CLM_NAVIGATION             = false;
+            o.CLM_NAVIGATION_THEME       = false;
+            o.CLM_FORCE_VEEVA_NAVIGATION = false;
 
         this.default = _.clone(o);
         this.options = _.clone(o);
@@ -231,7 +232,19 @@ MochiPlugin__Veeva.prototype =
 
     is_veeva : function()
     {
-        try {return /mobile\/containers\/data\/application/i.test(window.location.href)}
+        try
+        {
+            if (
+              this.options.CLM_FORCE_VEEVA_NAVIGATION
+              || /mobile\/containers\/data\/application/i.test(window.location.href)
+              || /^https?:\/\/localhost:\d+\//.test(window.location.href)
+              || /^[^\/]+\/\/wincrm/.test(window.location.href))
+            {
+                return true
+            }
+
+            return
+        }
         catch (e) {return}
     },
 

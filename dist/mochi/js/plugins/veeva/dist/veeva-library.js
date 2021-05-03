@@ -1,7 +1,7 @@
-// Veeva JavaScript Library version 181.9.0
+// Veeva JavaScript Library version 203.1.201
 // http://veeva.com
 //
-// Copyright © 2018 Veeva Systems, Inc. All rights reserved.
+// Copyright Â© 2021 Veeva Systems, Inc. All rights reserved.
 //
 // The com.veeva.clm namespace should be utilized when calling the JavaScript functions.
 //          Example: "com.veeva.clm.getDataForCurrentObject("Account","ID", myAccountID);"
@@ -1638,6 +1638,40 @@ com.veeva.clm = {
         com.veeva.clm.runAPIRequest(request, callback);
     },
 
+    //19,
+    // Returns HTTP Request result
+    //
+    // object - request object with all HTTP parameters
+    request:function(object, callback){
+        ret = this.checkCallbackFunction(callback);
+        if(!ret.success) {
+            return ret;
+        }
+
+        //check request object validity
+        var errorMessage = this.validateRequestObjectWithErrorMessage(object);
+        if (errorMessage !== "Valid") {
+            var error = {
+                success: false,
+                code: 5,
+                message: errorMessage
+            };
+            com.veeva.clm.wrapResult("request", callback, error);
+            return;
+        }
+
+        this.addRequestObjectDefaultsAndFormat(object);
+
+        window["com_veeva_clm_requestReturn"] = function(result) {
+            result = com.veeva.clm.formatResult(result);
+            com.veeva.clm.wrapResult("request", callback, result);
+            return;
+        };
+
+        var request = "veeva:request(" + JSON.stringify(object) + "),com_veeva_clm_requestReturn(result)";
+        com.veeva.clm.runAPIRequest(request, callback);
+    },
+
     /////////////////////// CLM Specific ///////////////////////
     //1,
     // Shows slide selector with specified presentation:key messages; callback gets notified if there aren't any valid key messages
@@ -1673,7 +1707,7 @@ com.veeva.clm = {
                         }
                     }
                 }
-                
+
             }
         }
 
@@ -1681,7 +1715,7 @@ com.veeva.clm = {
         window["com_veeva_clm_launchApprovedEmail"] = function(result) {
             result = com.veeva.clm.formatResult(result);
             var ret = {};
-            if(result.success) {                
+            if(result.success) {
                 ret.success = true;
                 if(result.code != undefined) {
                     ret.code = result.code;
@@ -1809,6 +1843,98 @@ com.veeva.clm = {
         return ret;
     },
 
+    validateRequestObjectWithErrorMessage: function(request) {
+        var errorString = "";
+
+        //validate that an object is passed in
+        if (typeof request !== "object") {
+            errorString = "Invalid request.  Must be an object.";
+        }
+        //validate url
+        //url must be a string
+        //value is required
+        else if (typeof request.url !== "string" || request.url.length <= 0) {
+            errorString = "Invalid URL value. Must be a non-empty String";
+        }
+        //validate method
+        //method must be one of the valid HTTP verbs
+        //optional
+        else if (request.method && !this.validateMethod(request.method)) {
+            errorString = "Invalid method value. Must be a valid HTTP method.";
+        }
+        //validate headers
+        //must be an object whose values are all strings
+        //optional
+        else if (request.headers && !this.validateHeaders(request.headers)) {
+            errorString = "Invalid headers value. Must be an object with values of type String";
+        }
+        //validate timeout
+        //must be a number
+        //optional
+        else if (request.timeout && (typeof request.timeout !== "number" || request.timeout <= 0)) {
+            errorString = "Invalid timeout value. Must be a positive number";
+        }
+        //validate expect
+        //must be a "text" or "blob"
+        //optional
+        else if (request.expect && !this.validateExpect(request.expect)) {
+            errorString = "Invalid expect value.  Must be a String of value 'text' or 'blob'";
+        }
+        else {
+            errorString = "Valid";
+        }
+
+        return errorString;
+    },
+
+    methods: ['POST', 'GET', 'HEAD', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE', 'PATCH'],
+
+    validateMethod: function(method) {
+        return typeof method === "string" && !!~this.methods.indexOf(method.toUpperCase());
+    },
+
+    validateHeaders: function(headers) {
+        if (typeof headers === "object") {
+            var keys = Object.keys(headers);
+            for (var i = 0; i < keys.length; i++) {
+                var key = keys[i];
+                var headerValue = headers[key];
+                if (typeof headerValue !== "string") {
+                    return false;
+                }
+            }
+        } else {
+            return false;
+        }
+        return true;
+    },
+
+    validateExpect: function(expect) {
+        return typeof expect === "string" && (expect.toLowerCase() === "text" || expect.toLowerCase() === "blob");
+    },
+
+    addRequestObjectDefaultsAndFormat: function(request) {
+        if (!request.method) {
+            request.method = "GET";
+        } else {
+            request.method = request.method.toUpperCase();
+        }
+        if (!request.headers) {
+            request.headers = {};
+        }
+        if (!request.timeout) {
+            request.timeout = 30;
+        }
+        if (!request.body) {
+            request.body = "";
+        }
+        if (!request.expect) {
+            request.expect = "text";
+        } else {
+            request.expect = request.expect.toLowerCase();
+        }
+    },
+
     getCurrentDate: function() {
         var currentDate = new Date();
         dateString = currentDate.getFullYear().toString();
@@ -1853,15 +1979,21 @@ com.veeva.clm = {
             com.veeva.clm.engageAPIRequest(request, callback);
         } else if(com.veeva.clm.isWin8()) {
             window.external.notify(request);
-        }
-        else {
-            //Remove the veeva: prefix, encode the remaining request, and add veeva: back.
-            //This works with a basic replace because we only run ONE request here.
+        } else if(com.veeva.clm.isVeevaMessagingEnabled()) {
+            window.webkit.messageHandlers.veeva.postMessage({"message": request});
+        } else {
+            // existing code in this block could be deleted, but to play safe, we keep
+        // as is just in case some legacy applications still need them.
+            // we will eventually remove this code block.
             request = request.replace(/^veeva:/, '');
             request = encodeURIComponent(request);
             request = "veeva:" + request;
             document.location = request;
         }
+    },
+
+    isVeevaMessagingEnabled: function() {
+        return Boolean(window.webkit.messageHandlers.veeva);
     },
 
     isWin8: function() {
@@ -2236,13 +2368,13 @@ com.veeva.clm.initialize = function initializeEngage() {
 
 //support functions to allow Windows Modern to support the OnExit functions
 com_veeva_clm_createRecordsOnExit = function() {
-	return com.veeva.clm.createRecordsOnExit();
+    return com.veeva.clm.createRecordsOnExit();
 }
 com_veeva_clm_updateRecordsOnExit = function() {
-	return com.veeva.clm.updateRecordsOnExit();
+    return com.veeva.clm.updateRecordsOnExit();
 }
 com_veeva_clm_updateCurrentRecordsOnExit = function() {
-	return com.veeva.clm.updateCurrentRecordsOnExit();
+    return com.veeva.clm.updateCurrentRecordsOnExit();
 }
 
 
