@@ -1,7 +1,7 @@
 # Veeva.js
 _Add Veeva CLM compatibility to Mochi._
 
-> [v1.0](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/js/plugins/veeva/CHANGELOG.md)
+> [v1.1](https://github.com/codeworksdev/mochi/blob/master/dist/mochi/js/plugins/veeva/CHANGELOG.md)
 
 This drop-in extension allows you to quickly develop a **[Veeva CLM application](https://www.veeva.com/products/multichannel-crm/clm/)** within Mochi while maintaining full Veeva CLM compliance. It fully utilizes the **[Veeva JS library](https://cdnmc1.vod309.com/clm/release/veeva-library.js)** and includes special API calls that interface directly with the platform.
 
@@ -93,17 +93,18 @@ _**Note:** Scroll down to the [options](#section-options) section for a list of 
 <a id="section-options"></a>
 ## OPTIONS
 ```
-TYPE   | OPTION NAME            | DEFAULT VALUE
---------------------------------------------------------------------------------------------------------------
-string | CLM_VERSION            | '1.0'
-string | CLM_NAME               | $('html title').text()
-string | CLM_ID                 | CLM_NAME.replace(/\W/g,'_').toUpperCase()+'_'+CLM_VERSION.replace(/\W/g,'_')
-string | CLM_SLIDE_PREFIX       | CLM_ID.toLowerCase()+'_slide'
-number | CLM_NUMBER_PAD         | 2
-number | CLM_FIRST_SLIDE_NUMBER | 0
-number | CLM_LAST_SLIDE_NUMBER  | 0
-bool   | CLM_NAVIGATION         | false
-bool   | CLM_NAVIGATION_THEME   | false
+TYPE   | OPTION NAME                | DEFAULT VALUE
+------------------------------------------------------------------------------------------------------------------
+string | CLM_VERSION                | '1.0'
+string | CLM_NAME                   | $('html title').text()
+string | CLM_ID                     | CLM_NAME.replace(/\W/g,'_').toUpperCase()+'_'+CLM_VERSION.replace(/\W/g,'_')
+string | CLM_SLIDE_PREFIX           | CLM_ID.toLowerCase()+'_slide'
+number | CLM_NUMBER_PAD             | 2
+number | CLM_FIRST_SLIDE_NUMBER     | 0
+number | CLM_LAST_SLIDE_NUMBER      | 0
+bool   | CLM_NAVIGATION             | false
+bool   | CLM_NAVIGATION_THEME       | false
+bool   | CLM_FORCE_VEEVA_NAVIGATION | false
 ```
 > **CLM_VERSION**
 > Decimal number representing the presentation version.
@@ -141,6 +142,9 @@ bool   | CLM_NAVIGATION_THEME   | false
 
 > **CLM_NAVIGATION_THEME**
 > By default, the navigation controls created by `options.CLM_NAVIGATION` are not themed with any CSS or icons (i.e., this option is set to false). This allows you to easily theme the controls yourself. Enabling this option assigns a basic SVG icon to each control.
+
+> **CLM_FORCE_VEEVA_NAVIGATION**
+> Enabling this option tells the navigation functions to not attempt to auto-detect the platform in use (e.g., Veeva, Windows, web browser, etc.). This is helpful in situtations where the intended target platfom is not fully supported by this plugin. Otherwise, it's recommended to keep this option disabled.
 
 ___
 # MULTICHANNEL CRM DOCUMENTATION
