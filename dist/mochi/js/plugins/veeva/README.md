@@ -107,27 +107,35 @@ bool   | CLM_NAVIGATION_THEME       | false
 bool   | CLM_FORCE_VEEVA_NAVIGATION | false
 ```
 > **CLM_VERSION**
+> 
 > Decimal number representing the presentation version.
 
 > **CLM_NAME**
+> 
 > Descriptive name of the presentation. By default, this value is generated automatically using the contents of the `<title>` tag in your HTML document.
 
 > **CLM_ID**
+> 
 > Machine-readable name of the presentation. By default, this value is generated automatically using `options.CLM_NAME` and `options.CLM_VERSION` combined.
 
 > **CLM_SLIDE_PREFIX**
+> 
 > Prefix for each slide (i.e., HTML file name) in the presentation. By default, this value is generated automatically using `options.CLM_ID` and appending "_slide" to the end of the prefix.
 
 > **CLM_NUMBER_PAD**
+> 
 > Determines the maximum number padding that should be assumed for each slide number in the presentation (e.g., a padding of 2 assumes "my_presentation_slide01.html").
 
 > **CLM_FIRST_SLIDE_NUMBER**
+> 
 > Determines the number of the first slide in the presentation. By default, zero-based numbering is assumed while using `options.CLM_NUMBER_PAD` (e.g., "my_presentation_slide00.html").
 
 > **CLM_LAST_SLIDE_NUMBER**
+> 
 > Determines the number of the last slide in the presentation.
 
 > **CLM_NAVIGATION**
+> 
 > If true, adds HTML navigation controls to the `<body>` tag of your document. The ID of the generated HTML element is `mochi-plugin-veeva-nav`, and contains 3 `<span>` tags &mdash; each defining a separate navigation control:
 > ```html
 > <div data-mochi="plugin" id="mochi-plugin-veeva-nav">
@@ -141,10 +149,11 @@ bool   | CLM_FORCE_VEEVA_NAVIGATION | false
 > * `<span>` <span>#</span>3 triggers `$m.veeva.nextSlide()`
 
 > **CLM_NAVIGATION_THEME**
+> 
 > By default, the navigation controls created by `options.CLM_NAVIGATION` are not themed with any CSS or icons (i.e., this option is set to false). This allows you to easily theme the controls yourself. Enabling this option assigns a basic SVG icon to each control.
 
 > **CLM_FORCE_VEEVA_NAVIGATION**
-
+> 
 > Enabling this option tells the navigation functions to not attempt to auto-detect the platform in use (e.g., Veeva, Windows, web browser, etc.). This is helpful in situtations where the intended target platfom is not fully supported by this plugin. Otherwise, it's recommended to keep this option disabled.
 
 ___
