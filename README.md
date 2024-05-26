@@ -1,5 +1,5 @@
-# Mochi
-_Front-end framework for developing responsive, mobile first projects on the web or offline._
+# Mochi 1.0
+_Front-end framework for developing responsive, mobile-first projects on the web or offline._
 
 > [**v1.6.2**](https://github.com/codeworksdev/mochi/releases/latest)
 
