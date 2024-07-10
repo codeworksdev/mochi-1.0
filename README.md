@@ -3,6 +3,9 @@ _Front-end framework for developing responsive, mobile-first projects on the web
 
 > [**v1.6.2**](https://github.com/codeworksdev/mochi/releases/latest)
 
+> [!NOTE]
+> You are currently viewing the legacy version of Mochi. The next-generation **Mochi 2.0** is available [here](https://github.com/codeworksdev/mochi-2.0).
+
 Mochi is a ready-to-deploy HTML5 boilerplate framework that runs on [Bootstrap](http://getbootstrap.com/), but adds tons of new features, with a strong focus on offline web applications without all the limitations. It achieves this goal by fully integrating and maintaining offline versions of popular libraries that have been out in the wild for years.
 
 ## What is Bootstrap?
